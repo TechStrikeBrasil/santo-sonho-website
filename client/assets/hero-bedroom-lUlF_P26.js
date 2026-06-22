@@ -1,0 +1,1 @@
+var e=`/assets/hero-bedroom-BJyruZpl.jpg`;export{e as t};

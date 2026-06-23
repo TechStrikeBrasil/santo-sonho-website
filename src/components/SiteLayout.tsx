@@ -1,7 +1,7 @@
-import { Link, Outlet } from "@tanstack/react-router";
+// import { Link, Outlet } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X, Phone, Mail, MapPin, Instagram, Facebook, MessageCircle, Moon, ShieldCheck, Users, CreditCard, Truck, Star } from "lucide-react";
-import { SITE, waLink } from "@/lib/site";
+import { SITE, waLink } from "../lib/site";
 
 const MARQUEE_ITEMS = [
   { icon: Moon, text: "até 120 noites de teste em casa" },

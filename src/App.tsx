@@ -1,15 +1,17 @@
-import { BrowserRouter } from 'react-router'
-import './App.css'
-import Home from './pages/Home'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Produtos from "./pages/Produtos";
+import Lojas from "./pages/Lojas";
 
-function App() {
-
+export default function App() {
   return (
-    <BrowserRouter>
-      <Home />
+    
+    <BrowserRouter basename="/santo-sonho-website/">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/produtos" element={<Produtos />} />
+        <Route path="/lojas" element={<Lojas />} />
+      </Routes>
     </BrowserRouter>
   );
-
 }
-
-export default App

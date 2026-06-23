@@ -1,7 +1,12 @@
-// import { Link, Outlet } from "@tanstack/react-router";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Phone, Mail, MapPin, Instagram, Facebook, MessageCircle, Moon, ShieldCheck, Users, CreditCard, Truck, Star } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, ShieldCheck, Users, CreditCard, Truck, Star } from "lucide-react";
 import { SITE, waLink } from "../lib/site";
+import {
+  FaInstagram,
+  FaFacebook
+} from "react-icons/fa";
+import logo from "../assets/santo-sonho-logo.png";
 
 const MARQUEE_ITEMS = [
   { icon: Moon, text: "até 120 noites de teste em casa" },
@@ -22,6 +27,7 @@ const NAV = [
 
 function Header() {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
       <div className="hidden md:block bg-[var(--brand)] text-brand-foreground text-xs">
@@ -31,32 +37,39 @@ function Header() {
             <a href={waLink(SITE.whatsappMain)} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-[var(--gold)]"><MessageCircle className="size-3.5" /> {SITE.whatsappDisplay}</a>
           </div>
           <div className="flex items-center gap-3">
-            <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[var(--gold)]"><Instagram className="size-4" /></a>
-            <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[var(--gold)]"><Facebook className="size-4" /></a>
+            <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[var(--gold)]"><FaInstagram className="size-4" /></a>
+            <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[var(--gold)]"><FaFacebook className="size-4" /></a>
           </div>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={SITE.logoUrl} alt="Santo Sonho Colchões" className="size-12 rounded-full object-cover" />
+          <img src={logo} alt="Santo Sonho Colchões" className="size-12 rounded-full object-cover" />
           <div className="leading-tight">
             <div className="font-display font-bold text-lg text-[var(--brand)]">Santo Sonho</div>
             <div className="text-[11px] uppercase tracking-widest text-muted-foreground">Colchões</div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
-          {NAV.map((n) => (
-            <Link
-              key={n.to}
-              to={n.to}
-              className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-[var(--brand)] transition-colors"
-              activeProps={{ className: "px-4 py-2 text-sm font-semibold text-[var(--brand)]" }}
-              activeOptions={{ exact: n.to === "/" }}
-            >
-              {n.label}
-            </Link>
-          ))}
-        </nav>
+  {NAV.map((n) => {
+    const active = location.pathname === n.to;
+
+    return (
+      <Link
+        key={n.to}
+        to={n.to}
+        className={
+          "px-4 py-2 text-sm font-medium transition-colors " +
+          (active
+            ? "text-[var(--brand)] font-semibold"
+            : "text-foreground/80 hover:text-[var(--brand)]")
+        }
+      >
+        {n.label}
+      </Link>
+    );
+  })}
+</nav>
         <a
           href={waLink(SITE.whatsappMain)}
           target="_blank"
@@ -109,7 +122,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={SITE.logoUrl} alt="Santo Sonho Colchões" className="size-14 rounded-full" />
+            <img src={logo} alt="Santo Sonho Colchões" className="size-14 rounded-full" />
             <div>
               <div className="font-display font-bold text-xl">Santo Sonho Colchões</div>
               <div className="text-sm text-brand-foreground/70">{SITE.tagline}</div>
@@ -119,8 +132,8 @@ function Footer() {
             Mais de uma década oferecendo o melhor em colchões, com lojas no ABC e em São Paulo. Atendimento humano e preços justos.
           </p>
           <div className="mt-5 flex items-center gap-3">
-            <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="size-10 rounded-full bg-white/10 hover:bg-[var(--gold)] hover:text-[var(--brand)] grid place-items-center transition"><Instagram className="size-5" /></a>
-            <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="size-10 rounded-full bg-white/10 hover:bg-[var(--gold)] hover:text-[var(--brand)] grid place-items-center transition"><Facebook className="size-5" /></a>
+            <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="size-10 rounded-full bg-white/10 hover:bg-[var(--gold)] hover:text-[var(--brand)] grid place-items-center transition"><FaInstagram className="text-lg"  /></a>
+            <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="size-10 rounded-full bg-white/10 hover:bg-[var(--gold)] hover:text-[var(--brand)] grid place-items-center transition"><FaFacebook className="text-lg" /> </a>
             <a href={waLink(SITE.whatsappMain)} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="size-10 rounded-full bg-white/10 hover:bg-[var(--gold)] hover:text-[var(--brand)] grid place-items-center transition"><MessageCircle className="size-5" /></a>
           </div>
         </div>

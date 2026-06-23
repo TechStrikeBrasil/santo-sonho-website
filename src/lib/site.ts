@@ -1,5 +1,3 @@
-import logoAsset from "../assets/santo-sonho-logo.png.asset.json";
-
 export const SITE = {
   name: "Santo Sonho Colchões",
   tagline: "Porque dormir bem, faz bem!",
@@ -8,7 +6,6 @@ export const SITE = {
   whatsappDisplay: "(11) 94140-9648",
   facebook: "https://www.facebook.com/santosonhocolchoes",
   instagram: "https://www.instagram.com/colchoessantosonho",
-  logoUrl: logoAsset.url,
 };
 
 export function waLink(number: string, message = "Olá! Gostaria de mais informações sobre os colchões.") {

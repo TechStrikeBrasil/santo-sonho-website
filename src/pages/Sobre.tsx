@@ -15,14 +15,19 @@ export default function Sobre() {
         <div>
           <h2 className="font-display text-3xl font-bold">Uma história feita de bons sonhos</h2>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            A <strong>Santo Sonho Colchões</strong> nasceu com um propósito simples: oferecer colchões de qualidade
-            com atendimento humano e preços justos. Hoje, somos referência na região do ABC e em São Paulo,
-            com 11 lojas espalhadas estrategicamente para estar pertinho de você.
+            A <strong>Santo Sonho Colchões</strong> nasceu do olhar atento de quem viveu de perto os desafios e as falhas do mercado.
+            Após anos atuando no segmento, os sócios Roberto Rocha Lima e Gabriel Rocha Lima, pai e filho, decidiram fundar uma empresa com propósito: <strong>oferecer mais do que colchões, proporcionar qualidade de vida através do sono.</strong>
           </p>
           <p className="mt-4 text-muted-foreground leading-relaxed">
-            Trabalhamos com as melhores marcas do mercado e contamos com uma equipe treinada para ajudar
-            cada cliente a encontrar o colchão ideal para o seu corpo, estilo de vida e orçamento.
+            Acreditamos que cada cliente é único. Por isso, aqui, o atendimento é individualizado, humano e especializado. Queremos entender sua rotina, suas dores, seus problemas e frustações, 
+            para então apresentar o colchão ideal para você, não o mais caro e sim o mais adequado às suas necessidades.
           </p>
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+                Nosso compromisso vai além de vender. Trabalhamos para transformar sua experiência de compra em um momento de cuidado, confiança e acolhimento. Com preços acessíveis, flexibilidade no pagamento, os melhores produtos do mercado e uma equipe pronta para ouvir você, fazemos da Santo Sonho um lugar onde você pode entrar com dúvidas e sair com a certeza de ter feito a escolha certa.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">Existe o colchão certo para cada tipo de sono, de corpo e de necessidade.</p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">A escolha do colchão certo não é apenas uma compra. É o primeiro passo para noites bem dormidas, dias mais leves, produtivos e uma vida com mais saúde e bem-estar.</p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">Esse é o nosso sonho. E queremos realizá-lo com você!</p>
         </div>
         <div className="rounded-3xl overflow-hidden shadow-[var(--shadow-brand)] aspect-[4/3]">
           <img src={heroImg} alt="Showroom Santo Sonho Colchões" loading="lazy" width={1920} height={1280} className="size-full object-cover" />

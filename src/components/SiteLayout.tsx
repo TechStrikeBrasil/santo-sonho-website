@@ -47,7 +47,7 @@ function Header() {
           <img src={logo} alt="Santo Sonho Colchões" className="size-12 rounded-full object-cover" />
           <div className="leading-tight">
             <div className="font-display font-bold text-lg text-[var(--brand)]">Santo Sonho</div>
-            <div className="text-[11px] uppercase tracking-widest text-muted-foreground">Colchões</div>
+            <div className="text-[15px] uppercase tracking-widest font-bold text-lg  text-[var(--brand)]">Colchões</div>
           </div>
         </Link>
         <nav className="hidden md:flex items-center gap-1">

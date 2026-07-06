@@ -1,15 +1,23 @@
 import { useMemo, useState } from "react";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Info, MessageCircle } from "lucide-react";
 import { PRODUTOS, SITE, waLink, type Produto } from "../lib/site";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "../components/ui/dialog";
 
 
 const CATEGORIAS: (Produto["categoria"] | "Todos")[] = ["Todos", "Casal", "Queen", "King", "Solteiro", "Box", "Acessórios"];
 
 export default function Produtos() {
   const [cat, setCat] = useState<(Produto["categoria"] | "Todos")>("Todos");
+  const [aberto, setAberto] = useState<Produto | null>(null);
   const lista = useMemo(() => (cat === "Todos" ? PRODUTOS : PRODUTOS.filter((p) => p.categoria === cat)), [cat]);
 
-  return (
+return (
     <>
       <section className="bg-[var(--brand)] text-brand-foreground">
         <div className="max-w-7xl mx-auto px-6 py-16 md:py-20">
@@ -47,14 +55,23 @@ export default function Produtos() {
                     <li key={c} className="flex items-center gap-1.5"><span className="size-1.5 rounded-full bg-[var(--gold)]" /> {c}</li>
                   ))}
                 </ul>
-                <a
-                  href={waLink(SITE.whatsappMain, `Olá! Tenho interesse no modelo "${p.nome}" (${p.categoria}). Pode me passar mais informações e o preço?`)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand)] text-brand-foreground px-5 py-3 text-sm font-semibold hover:opacity-90 transition"
-                >
-                  <MessageCircle className="size-4" /> Solicitar orçamento
-                </a>
+                <div className="mt-6 grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setAberto(p)}
+                    className="inline-flex items-center justify-center gap-2 rounded-full border border-[var(--brand)]/30 bg-transparent text-[var(--brand)] px-4 py-3 text-sm font-semibold hover:bg-[var(--brand)]/5 transition"
+                  >
+                    <Info className="size-4" /> Detalhes
+                  </button>
+                  <a
+                    href={waLink(SITE.whatsappMain, `Olá! Tenho interesse no modelo "${p.nome}" (${p.categoria}). Pode me passar mais informações e o preço?`)}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand)] text-brand-foreground px-4 py-3 text-sm font-semibold hover:opacity-90 transition"
+                  >
+                    <MessageCircle className="size-4" /> Orçamento
+                  </a>
+                </div>
               </div>
             </article>
           ))}
@@ -68,6 +85,93 @@ export default function Produtos() {
           </a>
         </div>
       </section>
+
+      <ProdutoModal produto={aberto} onOpenChange={(open) => !open && setAberto(null)} />
     </>
+  );
+}
+
+function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOpenChange: (open: boolean) => void }) {
+  const [ativa, setAtiva] = useState(0);
+  const galeria = produto?.galeria?.length ? produto.galeria : produto ? [produto.imagem] : [];
+
+  return (
+    <Dialog
+      open={!!produto}
+      onOpenChange={(open) => {
+        onOpenChange(open);
+        if (!open) setAtiva(0);
+      }}
+    >
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-0">
+        {produto && (
+          <div className="grid md:grid-cols-2 gap-0">
+            <div className="bg-muted p-6 flex flex-col gap-4">
+              <div className="aspect-[4/3] overflow-hidden rounded-xl bg-background">
+                <img src={galeria[ativa]} alt={produto.nome} className="size-full object-cover" />
+              </div>
+              {galeria.length > 1 && (
+                <div className="grid grid-cols-4 gap-2">
+                  {galeria.map((src, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setAtiva(i)}
+                      className={`aspect-square rounded-lg overflow-hidden border-2 transition ${i === ativa ? "border-[var(--brand)]" : "border-transparent opacity-70 hover:opacity-100"}`}
+                    >
+                      <img src={src} alt={`${produto.nome} ${i + 1}`} className="size-full object-cover" />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="p-6 md:p-8 flex flex-col">
+              <DialogHeader>
+                <span className="text-xs font-semibold tracking-wider uppercase text-[var(--brand)]/70">{produto.categoria}</span>
+                <DialogTitle className="font-display text-2xl md:text-3xl font-bold mt-1 text-left">{produto.nome}</DialogTitle>
+                <DialogDescription className="text-left text-sm text-muted-foreground mt-2">{produto.descricao}</DialogDescription>
+              </DialogHeader>
+
+              {produto.especificacoes && produto.especificacoes.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="font-display font-semibold text-base mb-3">Especificações</h4>
+                  <dl className="divide-y divide-border rounded-xl border border-border overflow-hidden">
+                    {produto.especificacoes.map((e) => (
+                      <div key={e.label} className="grid grid-cols-2 gap-3 px-4 py-2.5 text-sm">
+                        <dt className="text-muted-foreground">{e.label}</dt>
+                        <dd className="font-medium text-foreground">{e.value}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </div>
+              )}
+
+              {produto.dimensoes && produto.dimensoes.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="font-display font-semibold text-base mb-3">Dimensões</h4>
+                  <div className="grid grid-cols-3 gap-2">
+                    {produto.dimensoes.map((d) => (
+                      <div key={d.label} className="rounded-xl border border-border p-3 text-center">
+                        <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{d.label}</div>
+                        <div className="font-display font-bold text-[var(--brand)] mt-1">{d.value}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              <a
+                href={waLink(SITE.whatsappMain, `Olá! Tenho interesse no modelo "${produto.nome}" (${produto.categoria}). Pode me passar mais informações e o preço?`)}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--brand)] text-brand-foreground px-5 py-3 text-sm font-semibold hover:opacity-90 transition"
+              >
+                <MessageCircle className="size-4" /> Solicitar orçamento no WhatsApp
+              </a>
+            </div>
+          </div>
+        )}
+      </DialogContent>
+    </Dialog>
   );
 }

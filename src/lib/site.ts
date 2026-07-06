@@ -51,16 +51,40 @@ export type Produto = {
   descricao: string;
   caracteristicas: string[];
   imagem: string;
+  galeria?: string[];
+  especificacoes?: { label: string; value: string }[];
+  dimensoes?: { label: string; value: string }[];
   destaque?: boolean;
 };
 
+const dimCasal = [
+  { label: "Largura", value: "138 cm" },
+  { label: "Comprimento", value: "188 cm" },
+  { label: "Altura", value: "30 cm" },
+];
+const dimQueen = [
+  { label: "Largura", value: "158 cm" },
+  { label: "Comprimento", value: "198 cm" },
+  { label: "Altura", value: "32 cm" },
+];
+const dimKing = [
+  { label: "Largura", value: "193 cm" },
+  { label: "Comprimento", value: "203 cm" },
+  { label: "Altura", value: "34 cm" },
+];
+const dimSolteiro = [
+  { label: "Largura", value: "88 cm" },
+  { label: "Comprimento", value: "188 cm" },
+  { label: "Altura", value: "25 cm" },
+];
+
 export const PRODUTOS: Produto[] = [
-  { id: "conforto-plus", nome: "Conforto Plus Pillow Top", categoria: "Casal", descricao: "Colchão de molas ensacadas com pillow top em espuma D33, alta durabilidade e suporte ergonômico.", caracteristicas: ["Molas ensacadas", "Pillow Top", "Tecido antialérgico", "Garantia 5 anos"], imagem: m1, destaque: true },
-  { id: "memory-cloud", nome: "Memory Cloud Premium", categoria: "Queen", descricao: "Espuma viscoelástica de alta densidade que se molda ao corpo, aliviando pontos de pressão.", caracteristicas: ["Memory Foam", "Densidade D45", "Tecido respirável", "Garantia 7 anos"], imagem: m2, destaque: true },
-  { id: "majestic-king", nome: "Majestic King Euro Pillow", categoria: "King", descricao: "O ápice do conforto. Molas pocket de 7 zonas com Euro Pillow exclusivo.", caracteristicas: ["Molas Pocket 7 zonas", "Euro Pillow", "Bordas reforçadas", "Garantia 10 anos"], imagem: m3, destaque: true },
-  { id: "ortho-spring", nome: "Ortho Spring Firme", categoria: "Casal", descricao: "Suporte ortopédico ideal para quem busca firmeza e alinhamento da coluna.", caracteristicas: ["Molas Bonnel", "Espuma D28", "Firmeza alta"], imagem: m4 },
-  { id: "sweet-dreams", nome: "Sweet Dreams Solteiro", categoria: "Solteiro", descricao: "Conforto e leveza para o quarto das crianças e adolescentes.", caracteristicas: ["Espuma D23", "Tecido infantil", "Antiácaro"], imagem: m5 },
-  { id: "box-premium", nome: "Box Base Premium", categoria: "Box", descricao: "Base box reforçada com madeira maciça e revestimento sofisticado.", caracteristicas: ["Madeira maciça", "Tecido suede", "Pés cromados"], imagem: m3 },
-  { id: "kit-travesseiros", nome: "Kit Travesseiros e Edredom", categoria: "Acessórios", descricao: "Conjunto premium com 2 travesseiros e edredom dupla face.", caracteristicas: ["Fibra siliconizada", "100% algodão", "Hipoalergênico"], imagem: m6 },
-  { id: "casal-essencial", nome: "Essencial Casal", categoria: "Casal", descricao: "O custo-benefício perfeito para o seu descanso diário.", caracteristicas: ["Espuma D26", "Tecido jacquard", "Garantia 3 anos"], imagem: m2 },
+  { id: "conforto-plus", nome: "Conforto Plus Pillow Top", categoria: "Casal", descricao: "Colchão de molas ensacadas com pillow top em espuma D33, alta durabilidade e suporte ergonômico.", caracteristicas: ["Molas ensacadas", "Pillow Top", "Tecido antialérgico", "Garantia 5 anos"], imagem: m1, galeria: [m1, m2, m3], especificacoes: [{ label: "Tipo", value: "Molas ensacadas" }, { label: "Conforto", value: "Macio / médio" }, { label: "Pillow Top", value: "Espuma D33" }, { label: "Tecido", value: "Jacquard antialérgico" }, { label: "Garantia", value: "5 anos" }, { label: "Peso suportado", value: "150 kg por pessoa" }], dimensoes: dimCasal, destaque: true },
+  { id: "memory-cloud", nome: "Memory Cloud Premium", categoria: "Queen", descricao: "Espuma viscoelástica de alta densidade que se molda ao corpo, aliviando pontos de pressão.", caracteristicas: ["Memory Foam", "Densidade D45", "Tecido respirável", "Garantia 7 anos"], imagem: m2, galeria: [m2, m3, m1], especificacoes: [{ label: "Tipo", value: "Viscoelástico (Memory Foam)" }, { label: "Densidade", value: "D45" }, { label: "Conforto", value: "Médio" }, { label: "Tecido", value: "Knit respirável" }, { label: "Garantia", value: "7 anos" }, { label: "Peso suportado", value: "160 kg por pessoa" }], dimensoes: dimQueen, destaque: true },
+  { id: "majestic-king", nome: "Majestic King Euro Pillow", categoria: "King", descricao: "O ápice do conforto. Molas pocket de 7 zonas com Euro Pillow exclusivo.", caracteristicas: ["Molas Pocket 7 zonas", "Euro Pillow", "Bordas reforçadas", "Garantia 10 anos"], imagem: m3, galeria: [m3, m1, m2], especificacoes: [{ label: "Tipo", value: "Molas Pocket 7 zonas" }, { label: "Conforto", value: "Firme / ergonômico" }, { label: "Euro Pillow", value: "Sim, dupla face" }, { label: "Bordas", value: "Reforço lateral em espuma HR" }, { label: "Garantia", value: "10 anos" }, { label: "Peso suportado", value: "180 kg por pessoa" }], dimensoes: dimKing, destaque: true },
+  { id: "ortho-spring", nome: "Ortho Spring Firme", categoria: "Casal", descricao: "Suporte ortopédico ideal para quem busca firmeza e alinhamento da coluna.", caracteristicas: ["Molas Bonnel", "Espuma D28", "Firmeza alta"], imagem: m4, galeria: [m4, m1, m3], especificacoes: [{ label: "Tipo", value: "Molas Bonnel" }, { label: "Conforto", value: "Firme" }, { label: "Espuma", value: "D28" }, { label: "Tecido", value: "Jacquard" }, { label: "Garantia", value: "5 anos" }], dimensoes: dimCasal },
+  { id: "sweet-dreams", nome: "Sweet Dreams Solteiro", categoria: "Solteiro", descricao: "Conforto e leveza para o quarto das crianças e adolescentes.", caracteristicas: ["Espuma D23", "Tecido infantil", "Antiácaro"], imagem: m5, galeria: [m5, m6, m2], especificacoes: [{ label: "Tipo", value: "Espuma" }, { label: "Densidade", value: "D23" }, { label: "Conforto", value: "Macio" }, { label: "Tecido", value: "Estampa infantil, antiácaro" }, { label: "Garantia", value: "3 anos" }], dimensoes: dimSolteiro },
+  { id: "box-premium", nome: "Box Base Premium", categoria: "Box", descricao: "Base box reforçada com madeira maciça e revestimento sofisticado.", caracteristicas: ["Madeira maciça", "Tecido suede", "Pés cromados"], imagem: m3, galeria: [m3, m1, m4], especificacoes: [{ label: "Estrutura", value: "Madeira maciça reforçada" }, { label: "Revestimento", value: "Tecido suede" }, { label: "Pés", value: "Cromados 15 cm" }, { label: "Garantia", value: "5 anos" }], dimensoes: dimCasal },
+  { id: "kit-travesseiros", nome: "Kit Travesseiros e Edredom", categoria: "Acessórios", descricao: "Conjunto premium com 2 travesseiros e edredom dupla face.", caracteristicas: ["Fibra siliconizada", "100% algodão", "Hipoalergênico"], imagem: m6, galeria: [m6, m2, m5], especificacoes: [{ label: "Composição", value: "100% algodão / fibra siliconizada" }, { label: "Itens", value: "2 travesseiros + 1 edredom" }, { label: "Lavagem", value: "Máquina, água fria" }, { label: "Hipoalergênico", value: "Sim" }], dimensoes: [{ label: "Travesseiro", value: "50 x 70 cm" }, { label: "Edredom Queen", value: "220 x 240 cm" }] },
+  { id: "casal-essencial", nome: "Essencial Casal", categoria: "Casal", descricao: "O custo-benefício perfeito para o seu descanso diário.", caracteristicas: ["Espuma D26", "Tecido jacquard", "Garantia 3 anos"], imagem: m2, galeria: [m2, m1, m4], especificacoes: [{ label: "Tipo", value: "Espuma" }, { label: "Densidade", value: "D26" }, { label: "Tecido", value: "Jacquard" }, { label: "Garantia", value: "3 anos" }], dimensoes: dimCasal },
 ];

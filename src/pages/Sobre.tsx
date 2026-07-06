@@ -27,7 +27,7 @@ export default function Sobre() {
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">Existe o colchão certo para cada tipo de sono, de corpo e de necessidade.</p>
             <p className="mt-4 text-muted-foreground leading-relaxed">A escolha do colchão certo não é apenas uma compra. É o primeiro passo para noites bem dormidas, dias mais leves, produtivos e uma vida com mais saúde e bem-estar.</p>
-            <p className="mt-4 text-muted-foreground leading-relaxed">Esse é o nosso sonho. E queremos realizá-lo com você!</p>
+            <p className="mt-4 text-muted-foreground leading-relaxed"><strong>Esse é o nosso sonho. E queremos realizá-lo com você!</strong></p>
         </div>
         <div className="rounded-3xl overflow-hidden shadow-[var(--shadow-brand)] aspect-[4/3]">
           <img src={heroImg} alt="Showroom Santo Sonho Colchões" loading="lazy" width={1920} height={1280} className="size-full object-cover" />

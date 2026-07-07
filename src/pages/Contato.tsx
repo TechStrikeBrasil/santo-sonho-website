@@ -1,5 +1,8 @@
 import { Mail, MessageCircle, MapPin } from "lucide-react";
-import { SITE, waLink, LOJAS } from "../lib/site";
+import { waLink } from "../lib/whatsapp";
+import { LOJAS } from "../data/lojas";
+import { SITE } from "../data/site";
+
 import {
   FaInstagram,
   FaFacebook

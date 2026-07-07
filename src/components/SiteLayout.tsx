@@ -1,7 +1,8 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, ShieldCheck, CreditCard, Star } from "lucide-react";
-import { SITE, waLink } from "../lib/site";
+import {SITE} from "../data/site";
+import { waLink } from "../lib/whatsapp";
 import {
   FaInstagram,
   FaFacebook

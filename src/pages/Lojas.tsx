@@ -1,5 +1,6 @@
 import { MapPin, Phone, MessageCircle } from "lucide-react";
-import { LOJAS, waLink } from "../lib/site";
+import { LOJAS } from "../data/lojas";
+import { waLink } from "../lib/whatsapp";
 
 
 export default function Lojas() {

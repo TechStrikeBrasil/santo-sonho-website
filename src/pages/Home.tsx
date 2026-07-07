@@ -1,7 +1,10 @@
 import { ArrowRight, ShieldCheck, Truck, MessageCircle, Star, MapPin } from "lucide-react";
 import heroImg from "../assets/hero-bedroom.jpg";
-import { PRODUTOS, SITE, waLink, LOJAS } from "../lib/site";
 import { Link } from "react-router-dom";
+import { waLink } from "../lib/whatsapp";
+import { LOJAS } from "../data/lojas";
+import { SITE } from "../data/site";
+import { PRODUTOS } from "../data/produtos";
 
 
 

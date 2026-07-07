@@ -1,6 +1,10 @@
 import { useMemo, useState } from "react";
 import { ArrowRight, Info, MessageCircle } from "lucide-react";
-import { PRODUTOS, SITE, waLink, type Produto } from "../lib/site";
+import { SITE } from "../data/site";
+import { waLink } from "../lib/whatsapp";
+import type { Produto } from "../types/produto";
+import { PRODUTOS } from "../data/produtos";
+
 import {
   Dialog,
   DialogContent,
@@ -10,7 +14,15 @@ import {
 } from "../components/ui/dialog";
 
 
-const CATEGORIAS: (Produto["categoria"] | "Todos")[] = ["Todos", "Colchões", "Casal", "Queen", "King", "Solteiro", "Box", "Acessórios"];
+const CATEGORIAS: (Produto["categoria"] | "Todos")[] = [
+    "Todos",
+    "Colchão",
+    "Box",
+    "Cama Box",
+    "Cabeceira",
+    "Travesseiro",
+    "Acessório",
+];
 
 export default function Produtos() {
   const [cat, setCat] = useState<(Produto["categoria"] | "Todos")>("Todos");
@@ -149,14 +161,15 @@ function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOp
               {produto.dimensoes && produto.dimensoes.length > 0 && (
                 <div className="mt-6">
                   <h4 className="font-display font-semibold text-base mb-3">Dimensões</h4>
-                  <div className="grid grid-cols-3 gap-2">
+                  <p className="text-xs text-muted-foreground mb-3">Fabricado em todas as medidas abaixo.</p>
+                  <dl className="divide-y divide-border rounded-xl border border-border overflow-hidden">
                     {produto.dimensoes.map((d) => (
-                      <div key={d.label} className="rounded-xl border border-border p-3 text-center">
-                        <div className="text-[11px] uppercase tracking-wider text-muted-foreground">{d.label}</div>
-                        <div className="font-display font-bold text-[var(--brand)] mt-1">{d.value}</div>
+                      <div key={d.label} className="grid grid-cols-2 gap-3 px-4 py-2.5 text-sm">
+                        <dt className="text-muted-foreground">{d.label}</dt>
+                        <dd className="font-medium text-foreground">{d.value}</dd>
                       </div>
                     ))}
-                  </div>
+                  </dl>
                 </div>
               )}
 

@@ -20,13 +20,13 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-36 text-brand-foreground">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
-            <Star className="size-3.5 text-[var(--gold)]" /> Há mais de 10 anos cuidando do seu sono
+            <Star className="size-3.5 text-[var(--gold)]" /> Há mais de 10 anos transformando verdadeiras noite em descanso!
           </span>
           <h1 className="mt-6 font-display text-4xl md:text-6xl font-bold leading-[1.05] max-w-3xl">
-            O colchão certo para a sua melhor noite de sono.
+            Sua melhor noite de sono começa aqui.
           </h1>
           <p className="mt-5 text-lg md:text-xl text-brand-foreground/85 max-w-2xl">
-            Conforto, qualidade e variedade das melhores marcas. {LOJAS.length} lojas no ABC e em São Paulo prontas para te atender.
+            A maior rede de colchões do ABC Paulista, com mais de 10 lojas espalhadas pelo Grande ABC e São Paulo. Levamos até você, conforto, qualidade e as melhores tecnologias do mundo para transformar suas noites de sono.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link to="/produtos" className="inline-flex items-center gap-2 rounded-full bg-[var(--gold)] text-[var(--brand)] px-6 py-3.5 font-semibold hover:opacity-90 transition">

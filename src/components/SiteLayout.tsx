@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, ShieldCheck, Users, CreditCard, Truck, Star } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, ShieldCheck, CreditCard, Star } from "lucide-react";
 import { SITE, waLink } from "../lib/site";
 import {
   FaInstagram,
@@ -9,12 +9,10 @@ import {
 import logo from "../assets/santo-sonho-logo.png";
 
 const MARQUEE_ITEMS = [
-  { icon: Moon, text: "até 120 noites de teste em casa" },
-  { icon: ShieldCheck, text: "até 12 anos de garantia" },
-  { icon: Users, text: "3 milhões de famílias atendidas" },
+  { icon: Moon, text: "Porque dormir bem faz bem." },
+  { icon: ShieldCheck, text: "até 10 anos de garantia" },
   { icon: CreditCard, text: "10x sem juros em até 2 cartões" },
-  { icon: Truck, text: "Frete grátis + montagem para todo o Brasil" },
-  { icon: Star, text: "4,9/5 no Google" },
+  { icon: Star, text: "ZERO reclamações no Reclame Aqui!" },
 ];
 
 const NAV = [

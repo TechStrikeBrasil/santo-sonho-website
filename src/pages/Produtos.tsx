@@ -10,7 +10,7 @@ import {
 } from "../components/ui/dialog";
 
 
-const CATEGORIAS: (Produto["categoria"] | "Todos")[] = ["Todos", "Casal", "Queen", "King", "Solteiro", "Box", "Acessórios"];
+const CATEGORIAS: (Produto["categoria"] | "Todos")[] = ["Todos", "Colchões", "Casal", "Queen", "King", "Solteiro", "Box", "Acessórios"];
 
 export default function Produtos() {
   const [cat, setCat] = useState<(Produto["categoria"] | "Todos")>("Todos");

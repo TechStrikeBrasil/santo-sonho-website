@@ -5,6 +5,7 @@ import { waLink } from "../lib/whatsapp";
 import { LOJAS } from "../data/lojas";
 import { SITE } from "../data/site";
 import { PRODUTOS } from "../data/produtos";
+import BannerCarousel from "../components/BannerCarousel";
 
 
 
@@ -12,6 +13,7 @@ export default function Home() {
   const destaques = PRODUTOS.filter((p) => p.destaque);
   return (
     <>
+      
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -20,7 +22,7 @@ export default function Home() {
         </div>
         <div className="relative max-w-7xl mx-auto px-6 py-28 md:py-36 text-brand-foreground">
           <span className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur px-4 py-1.5 text-xs font-medium tracking-wide uppercase">
-            <Star className="size-3.5 text-[var(--gold)]" /> Há mais de 10 anos transformando verdadeiras noite em descanso!
+            <Star className="size-3.5 text-[var(--gold)]" /> Há mais de 10 anos transformando noites em verdadeiro descanso!
           </span>
           <h1 className="mt-6 font-display text-4xl md:text-6xl font-bold leading-[1.05] max-w-3xl">
             Sua melhor noite de sono começa aqui.
@@ -59,7 +61,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      <BannerCarousel />
       {/* Destaques */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex items-end justify-between gap-4 mb-10">

@@ -73,5 +73,5 @@ export const atenas: Produto = {
 
   dimensoes: dimensoesColchao("22 cm"),
 
-  destaque: true,
+  destaque: false,
 };

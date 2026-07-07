@@ -75,5 +75,5 @@ export const viseu: Produto = {
 
   dimensoes: dimensoesColchao("24 cm"),
 
-  destaque: true,
+  destaque: false,
 };

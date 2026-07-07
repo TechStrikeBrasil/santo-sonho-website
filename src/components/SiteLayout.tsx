@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, ShieldCheck, CreditCard, Star } from "lucide-react";
+import { Menu, X, Phone, Mail, MapPin, MessageCircle, Moon, CreditCard, Star, Users, BedDoubleIcon, Truck } from "lucide-react";
 import {SITE} from "../data/site";
 import { waLink } from "../lib/whatsapp";
 import {
@@ -10,10 +10,12 @@ import {
 import logo from "../assets/santo-sonho-logo.png";
 
 const MARQUEE_ITEMS = [
+  { icon: Star, text: "Nota 4,9/5 no Google." },
+  { icon: Users, text: "Mais de 2 milhões de colchões vendidos e famílias atendidas." },
   { icon: Moon, text: "Porque dormir bem faz bem." },
-  { icon: ShieldCheck, text: "até 10 anos de garantia" },
-  { icon: CreditCard, text: "10x sem juros em até 2 cartões" },
-  { icon: Star, text: "ZERO reclamações no Reclame Aqui!" },
+  { icon: BedDoubleIcon, text: "Mais de 14 anos no mercado colchoeiro." },
+  { icon: CreditCard, text: "Parcelamento em até 24x sem juros!" },
+  { icon: Truck, text: "Frete e montagem grátis!" },
 ];
 
 const NAV = [

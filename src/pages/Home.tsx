@@ -5,6 +5,7 @@ import { waLink } from "../lib/whatsapp";
 import { LOJAS } from "../data/lojas";
 import { SITE } from "../data/site";
 import { PRODUTOS } from "../data/produtos";
+import BannerCarousel from "../components/BannerCarousel";
 
 
 
@@ -12,6 +13,7 @@ export default function Home() {
   const destaques = PRODUTOS.filter((p) => p.destaque);
   return (
     <>
+      
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0">
@@ -59,7 +61,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
+      <BannerCarousel />
       {/* Destaques */}
       <section className="max-w-7xl mx-auto px-6 py-20">
         <div className="flex items-end justify-between gap-4 mb-10">

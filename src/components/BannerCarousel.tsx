@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import bannerPromoNew from "../assets/banners/banner-promo-new.png";
+import bannerStrongNew from "../assets/banners/banner-strong-new.png";
 import bannerAnoNovo from "../assets/banners/banner-ano-novo.jpg";
 import bannerColchaoStrong from "../assets/banners/banner-colchao-strong.jpg";
 import bannerColchaoVelho from "../assets/banners/banner-colchao-velho.jpg";
@@ -17,10 +19,12 @@ export type Banner = {
 };
 
 export const BANNERS: Banner[] = [
-  { src: bannerAnoNovo, alt: "Ano Novo de sono renovado — colchões com até 50% de desconto" },
-  { src: bannerColchaoStrong, alt: "Colchão Strong — Conforto e qualidade para o seu sono" },
-  { src: bannerColchaoVelho, alt: "Colchão Velho — Solução para o seu descanso" },
-  { src: bannerSitePromo, alt: "Promoção do site — Ofertas imperdíveis" },
+  { src: bannerPromoNew, alt: "Nova promoção - Ofertas imperdíveis" },
+  { src: bannerStrongNew, alt: "Colchão Strong - O primeiro bodybuilder do Brasil." },
+  { src: bannerAnoNovo, alt: "Ano Novo de sono renovado - colchões com até 50% de desconto" },
+  { src: bannerColchaoStrong, alt: "Colchão Strong - Conforto e qualidade para o seu sono" },
+  { src: bannerColchaoVelho, alt: "Colchão Velho - Solução para o seu descanso" },
+  { src: bannerSitePromo, alt: "Promoção do site - Ofertas imperdíveis" },
 ];
 
 const INTERVALO_MS = 7000;

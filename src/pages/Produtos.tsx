@@ -21,7 +21,7 @@ const CATEGORIAS: (Produto["categoria"] | "Todos")[] = [
     "Cama Box",
     "Cabeceira",
     "Travesseiro",
-    "Acessório",
+    "Acessórios",
 ];
 
 export default function Produtos() {
@@ -61,7 +61,7 @@ return (
               <div className="p-6 flex-1 flex flex-col">
                 <span className="text-xs font-semibold tracking-wider uppercase text-[var(--brand)]/70">{p.categoria}</span>
                 <h3 className="font-display font-bold text-xl mt-1">{p.nome}</h3>
-                <p className="text-sm text-muted-foreground mt-2">{p.descricao}</p>
+                <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{p.descricao}</p>
                 <ul className="mt-4 grid grid-cols-2 gap-1.5 text-xs text-foreground/75">
                   {p.caracteristicas.map((c) => (
                     <li key={c} className="flex items-center gap-1.5"><span className="size-1.5 rounded-full bg-[var(--gold)]" /> {c}</li>

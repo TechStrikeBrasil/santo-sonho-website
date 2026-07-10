@@ -4,7 +4,7 @@ export type CategoriaProduto =
     | "Cama Box"
     | "Cabeceira"
     | "Travesseiro"
-    | "Acessório";
+    | "Acessórios";
 
 export interface Especificacao {
     label: string;

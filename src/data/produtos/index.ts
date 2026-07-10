@@ -11,9 +11,19 @@ import { vilaReal } from "./vila-real";
 import { grandPalace } from "./grand-palace";
 import { luxury } from "./luxury";
 import { diamondPlus } from "./diamond-plus";
+import { serraDaEstrela } from "./serra-da-estrela";
+import { braganca } from "./braganca";
+import { aldeiaDeMos } from "./aldeia-de-mos";
+import { planetSense } from "./planet-sense";
+import { eminence } from "./eminence";
 
 export const PRODUTOS = [
-    diamondPlus,,
+    eminence,
+    planetSense,
+    aldeiaDeMos,
+    braganca,
+    serraDaEstrela,
+    diamondPlus,
     luxury,
     grandPalace,
     vilaReal,

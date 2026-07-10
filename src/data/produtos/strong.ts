@@ -30,7 +30,11 @@ export const strong: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Strong Muscle Recovery Device foi desenvolvido para transformar o sono em um verdadeiro ritual de recuperação, equilíbrio e renovação física!",
+    "Alta performance não termina no treino  Ela continua no descanso. "+
+    "O STRONG Muscle Recovery Device foi desenvolvido para transformar o sono em um verdadeiro ritual de recuperação, equilíbrio e renovação física."+
+    "Cada noite proporciona um descanso profundo, que alivia tensões, restaura o corpo e prepara você para ir além no dia seguinte. Mais do que "+
+    "conforto, o STRONG entrega excelência em recuperação para quem exige o máximo de si."+
+    "Durma forte. Acorde no seu melhor nível.",
 
   imagem: strong1,
 

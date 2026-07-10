@@ -30,7 +30,10 @@ export const barcelos: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Barcelos foi desenvolvido para proporcionar o equilíbrio perfeito entre conforto, suporte e resistência.",
+    "O Colchão Barcelos foi desenvolvido para proporcionar o equilíbrio perfeito entre conforto, suporte e resistência. Sua estrutura conta com molas " +
+    "ensacadas individuais, que garantem excelente sustentação, adaptação ao corpo e redução da transferência de movimentos, promovendo noites de " +
+    "sono mais tranquilas. Com suporte de peso de até 195 kg, o Barcelos oferece estabilidade, alinhamento corporal e bem-estar contínuo, sendo a "+
+    "escolha ideal para quem busca durabilidade, conforto e um descanso verdadeiramente renovador.",
 
   imagem: barcelos1,
 

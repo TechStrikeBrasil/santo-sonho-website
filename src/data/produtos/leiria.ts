@@ -29,7 +29,9 @@ export const leiria: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "Criado para atender aos clientes que buscam conforto com suporte firme, mas sem a rigidez dos colchões tradicionais.",
+    "Criado para atender aos clientes que buscam conforto com suporte firme, mas sem a rigidez dos colchões tradicionais. O Colchão Leiria combina uma "+
+    "surpreendente estrutura de Molas Ensacadas Individualmente, com suporte para até 195 kg por pessoa, e o conforto extraordinário das espumas " +
+    "inteligentes de alto suporte. Este modelo tornou-se um dos mais requisitados por nossos clientes exigentes",
 
   imagem: leiria1,
 

@@ -30,7 +30,9 @@ export const diamondPlus: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O colchão Diamond oferece o melhor em tecnologia, além de possuir um design rico em detalhes HD, realçando ainda mais a sua beleza.",
+    "O colchão King Koil Diamond oferece o melhor em tecnologia, além de possuir um design rico em detalhes HD, realçando ainda mais a sua beleza. "+
+    "Espuma Ultrasoft Foam é uma camada adicional de alta resiliência e suporte. Esta espuma possui alta performance e maciez, adapta-se perfeitamente "+
+    "aos contornos do corpo, proporcionando o máximo de conforto",
 
   imagem: diamond1,
 

@@ -29,7 +29,9 @@ export const atenas: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Atenas é um modelo incrível, feito com excelentes matérias-primas, oferecendo conforto intermediário, nem muito firme e nem muito macio.",
+    "O Colchão Atenas é um modelo incrível, feito com excelentes matérias-primas, oferecendo conforto intermediário, nem muito firme e nem muito macio. "+
+    "Com tecido de sensação agradabilíssima da maravilhosa viscose de eucalipto e o suporte das excepcionais Molas Individuais Ensacadas, é o colchão "+
+    "ideal para presentear alguém querido ou até mesmo se presentear com o conforto maravilhoso que ele proporciona",
 
   imagem: atenas1,
 

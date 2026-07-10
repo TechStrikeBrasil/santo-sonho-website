@@ -30,7 +30,10 @@ export const serraDaEstrela: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "Produzido com a renomada malha belga Lava e laterais Chablis Blanc com tecnologia Sense Ice, o colchão Serra da Estrela mantém a noite sempre agradável.",
+    "Inspirado na famosa cidade Serra da Estrela, conhecida pela neve e pelo clima gelado, este colchão traz o máximo em frescor e conforto térmico. "+
+    "Produzido com a renomada malha belga Lava e laterais Chablis Blanc com tecnologia Sense Ice, ele mantém a noite sempre agradável. Suas molas " +
+    "ensacadas de alta resistência suportam até 310 kg por pessoa, enquanto o Memory Foam Visco Gel e o estofamento Ultra Rebound garantem maciez, "+
+    "suporte e um descanso digno de reis e rainhas",
 
   imagem: serradaestrela1,
 

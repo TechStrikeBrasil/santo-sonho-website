@@ -31,7 +31,11 @@ export const portocale: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Portocale foi criado para transformar cada noite em uma experiência de frescor, conforto e sofisticação, mesmo nos climas mais quentes.",
+    "Imagine dormir com a leveza de uma brisa à beira-mar. O Colchão Portocale foi criado para transformar cada noite em uma experiência de frescor, "+
+    "conforto e sofisticação, mesmo nos climas mais quentes. "+
+    "Seu descanso se torna profundo, envolvente e revigorante, proporcionando a sensação única de acordar renovado todos os dias. Cada detalhe foi "+
+    "pensado para oferecer equilíbrio térmico, adaptação ao corpo e um conforto digno dos melhores resorts do mundo. "+
+    "O Portocale é mais do que um colchão. É o luxo de dormir bem, todos os dias",
 
   imagem: portocale1,
 

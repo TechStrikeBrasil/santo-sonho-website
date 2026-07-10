@@ -30,7 +30,10 @@ export const luxury: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "Um colchão de luxo em sua quinta geração, ainda mais sofisticado.",
+    "Um colchão de luxo em sua quinta geração, ainda mais sofisticado. Produzido com malha belga da renomada LAVA TEXTILES e acabamento lateral em "+
+    "malha respirável Chablis Blanc com capitonê, garante frescor e durabilidade excepcionais. Seu Pillow Europeu com espuma Ultra Rebound e molas "+
+    "ensacadas HSS oferece firmeza na medida certa, estimulando a circulação e mantendo o alinhamento ideal da coluna para noites realmente "+
+    "revigorantes.",
 
   imagem: luxury1,
 

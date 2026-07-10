@@ -28,7 +28,10 @@ export const viseu: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Vizeu foi desenvolvido para oferecer o equilíbrio ideal entre conforto, suporte e durabilidade.",
+    "O Colchão Viseu foi desenvolvido para oferecer o equilíbrio ideal entre conforto, suporte e durabilidade. Sua estrutura conta com molejo High Steel" +
+    "2.0, um sistema de molas ensacadas individualmente que proporciona excelente sustentação, adaptação ao corpo e redução dos movimentos," +
+    "garantindo noites de sono mais tranquilas. Com conforto envolvente e suporte preciso, o Viseu promove alinhamento corporal e bem-estar contínuo," +
+    "sendo a escolha ideal para quem busca qualidade, estabilidade e um descanso realmente renovador",
 
   imagem: viseu1,
 

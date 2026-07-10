@@ -31,7 +31,9 @@ export const porto: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Porto une sofisticação e conforto em um só produto. Com espumas Ultra Rebound e molas ensacadas individuais que suportam até 200 kg por pessoa.",
+    "O Colchão Porto une sofisticação e conforto em um só produto. Com espumas Ultra Rebound e molas ensacadas individuais que suportam até 200 kg "+
+    "por pessoa, oferece excelente adaptação ao corpo e noites de sono estáveis e relaxantes. Seu acabamento em malha proporciona toque suave e "+
+    "temperatura agradável, trazendo o padrão de conforto dos melhores hotéis para o seu descanso.",
 
   imagem: porto1,
 

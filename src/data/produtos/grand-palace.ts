@@ -30,7 +30,9 @@ export const grandPalace: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Grand Palace oferece uma experiência de descanso profunda e revigorante, unindo suavidade, firmeza e um toque premium que eleva qualquer rotina de sono.",
+    "O Grand Palace oferece uma experiência de descanso profunda e revigorante, unindo suavidade, firmeza e um toque premium que eleva qualquer "+
+    "rotina de sono. Seu design favorece o alinhamento da coluna, alivia tensões e mantém uma sensação de frescor constante. Cada detalhe foi pensado " +
+    "para proporcionar bem-estar contínuo e a sensação deliciosa de deitar em um colchão que cuida de você",
 
   imagem: grandpalace1,
 

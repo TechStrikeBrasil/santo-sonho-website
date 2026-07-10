@@ -30,7 +30,9 @@ export const vilaReal: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Vila Real foi criado para transformar o descanso em uma experiência de conforto profundo e equilíbrio absoluto.",
+    "O Colchão Vila Real foi criado para transformar o descanso em uma experiência de conforto profundo e equilíbrio absoluto. A combinação de Visco + " +
+    "Látex se adapta ao corpo com precisão, aliviando tensões e proporcionando noites mais leves, silenciosas e renovadoras. " +
+    "Vila Real. Onde o conforto encontra a elegância do bem-dormir",
 
   imagem: vilareal1,
 

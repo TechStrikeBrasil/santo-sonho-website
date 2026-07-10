@@ -31,7 +31,10 @@ export const braganca: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Bragança é um colchão premium desenvolvido para quem busca alto padrão em conforto e tecnologia.",
+    "O Bragança é um colchão premium desenvolvido para quem busca alto padrão em conforto e tecnologia. Com revestimento em Látex Natural, oferece " +
+    "ventilação superior, ajuste perfeito ao corpo e um toque hipoalergênico. Sua malha belga Lava com tecnologia Sense Ice garante frescor constante, " + 
+    "enquanto as laterais Chablis Blanc e as molas ensacadas de alta resistência proporcionam suporte firme e durabilidade. Uma escolha perfeita para " +
+    "quem deseja um sono realmente excepcional.",
 
   imagem: braganca1,
 

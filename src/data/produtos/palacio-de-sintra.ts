@@ -30,7 +30,9 @@ export const palacioDeSintra: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O Colchão Palácio de Sintra representa o mais alto nível em conforto e elegância.",
+    "O Palácio de Sintra representa o mais alto nível em conforto e elegância. Desenvolvido com látex de alta qualidade, oferece adaptação precisa ao "+
+    "corpo, sustentação equilibrada e uma sensação de leveza incomparável. Sua estrutura foi pensada para proporcionar noites de sono profundas e "+
+    "restauradoras, entregando o padrão de descanso encontrado nos melhores hotéis do mundo.",
 
   imagem: palacio1,
 

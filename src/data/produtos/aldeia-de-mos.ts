@@ -32,7 +32,10 @@ export const aldeiaDeMos: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O colchão Aldeia de Mós entrega a verdadeira sensação de “dormir nas nuvens”.",
+    "O Aldeia de Mós entrega a verdadeira sensação de “dormir nas nuvens”. Com Pillow Europeu ultra macio e espumas premium como Látex Natural, "+
+    "Memory Foam, Ultra Rebound e Hyper Soft, ele oferece um abraço confortável com sustentação perfeita. Suas molas ensacadas suportam até 200 kg " +
+    "por pessoa, garantindo durabilidade e estabilidade. Revestido com a exclusiva malha belga Lava e tratamento antialérgico Purotex, é a escolha ideal " +
+    "para quem busca máximo conforto, frescor e saúde durante o sono.",
 
   imagem: aldeia1,
 

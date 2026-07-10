@@ -30,7 +30,9 @@ export const max33: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "Para quem procura um colchão de espuma com perfil de conforto extra firme, que não seja pesado e que dê para utilizar os dois lados.",
+    "Para quem procura um colchão de espuma com perfil de conforto extra firme, que não seja pesado e que dê para utilizar os dois lados. Apresentamos "+
+    "o modelo Maxx D33, que possui uma placa de sustentação firme, com dupla camada de espuma de altíssimo suporte para até 130 kg por pessoa. Com "+
+    "tecido respirável e antialérgico",
 
   imagem: max331,
 

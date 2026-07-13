@@ -38,7 +38,6 @@ return (
           <p className="mt-3 text-brand-foreground/80 max-w-2xl">Explore nossa linha completa de colchões, bases box e acessórios para uma noite perfeita de sono.</p>
         </div>
       </section>
-ca
       <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-wrap gap-2 mb-8">
           {CATEGORIAS.map((c) => (

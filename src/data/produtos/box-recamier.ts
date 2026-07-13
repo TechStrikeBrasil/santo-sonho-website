@@ -21,7 +21,7 @@ export const recamier: Produto = {
 
   nome: "Recamier",
 
-  categoria: "Box",
+  categoria: "Baús",
 
   descricao:
     "O box baú com auxiliar combina armazenamento inteligente e praticidade extra em um único produto. Possui amplo espaço interno para "+

@@ -18,7 +18,7 @@ const CATEGORIAS: (Produto["categoria"] | "Todos")[] = [
     "Todos",
     "Colchão",
     "Box",
-    "Cama Box",
+    "Baús",
     "Cabeceira",
     "Travesseiro",
     "Acessórios",
@@ -38,7 +38,7 @@ return (
           <p className="mt-3 text-brand-foreground/80 max-w-2xl">Explore nossa linha completa de colchões, bases box e acessórios para uma noite perfeita de sono.</p>
         </div>
       </section>
-
+ca
       <section className="max-w-7xl mx-auto px-6 py-10">
         <div className="flex flex-wrap gap-2 mb-8">
           {CATEGORIAS.map((c) => (
@@ -120,7 +120,7 @@ function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOp
           <div className="grid md:grid-cols-2 gap-0">
             <div className="bg-muted p-6 flex flex-col gap-4">
               <div className="aspect-[4/3] overflow-hidden rounded-xl bg-background">
-                <img src={galeria[ativa]} alt={produto.nome} className="size-full object-cover" />
+                <img src={galeria[ativa]} alt={produto.nome} className="size-full object-cover" loading="lazy" />
               </div>
               {galeria.length > 1 && (
                 <div className="grid grid-cols-4 gap-2">
@@ -130,7 +130,7 @@ function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOp
                       onClick={() => setAtiva(i)}
                       className={`aspect-square rounded-lg overflow-hidden border-2 transition ${i === ativa ? "border-[var(--brand)]" : "border-transparent opacity-70 hover:opacity-100"}`}
                     >
-                      <img src={src} alt={`${produto.nome} ${i + 1}`} className="size-full object-cover" />
+                      <img src={src} alt={`${produto.nome} ${i + 1}`} className="size-full object-cover" loading="lazy" />
                     </button>
                   ))}
                 </div>

@@ -16,8 +16,15 @@ import { braganca } from "./braganca";
 import { aldeiaDeMos } from "./aldeia-de-mos";
 import { planetSense } from "./planet-sense";
 import { eminence } from "./eminence";
+import { basesBox } from "./bases-box";
+import { bauCasal } from "./bau-casal";
+import { baseBoxAuxiliar } from "./bases-box-auxiliar";
+import { baseBoxColchao } from "./bases-box-colchao";
+import { bauAuxiliar } from "./bau-box-auxiliar";
+import { bauSolteiro } from "./bau-solteiro";
 
 export const PRODUTOS = [
+// COLCHÕES
     eminence,
     planetSense,
     aldeiaDeMos,
@@ -34,6 +41,14 @@ export const PRODUTOS = [
     max33,
     barcelos,
     leiria,
-    atenas,    
-    viseu
+    atenas,
+    viseu,
+//BAÚS
+    bauCasal,
+    bauSolteiro,
+    bauAuxiliar,
+//BOX
+    basesBox,
+    baseBoxAuxiliar,
+    baseBoxColchao
 ];

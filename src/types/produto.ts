@@ -1,7 +1,7 @@
 export type CategoriaProduto =
     | "Colchão"
     | "Box"
-    | "Cama Box"
+    | "Baús"
     | "Cabeceira"
     | "Travesseiro"
     | "Acessórios";

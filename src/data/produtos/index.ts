@@ -23,6 +23,14 @@ import { baseBoxColchao } from "./bases-box-colchao";
 import { bauAuxiliar } from "./bau-box-auxiliar";
 import { bauSolteiro } from "./bau-solteiro";
 
+import { cabeceiraMonalisa } from "./cabeceira-monalisa";
+import { cabeceiraDebora } from "./cabeceira-debora";
+import { cabeceiraTauani } from "./cabeceira-tauani";
+import { cabeceiraJade } from "./cabeceira-jade";
+import { cabeceiraGessi } from "./cabeceira-gessi";
+import { cabeceiraSimone } from "./cabeceira-simone";
+import { recamier } from "./box-recamier";
+
 export const PRODUTOS = [
 // COLCHÕES
     eminence,
@@ -50,5 +58,15 @@ export const PRODUTOS = [
 //BOX
     basesBox,
     baseBoxAuxiliar,
-    baseBoxColchao
+    baseBoxColchao,
+    recamier,
+
+// CABECEIRAS
+    cabeceiraMonalisa,
+    cabeceiraDebora,
+    cabeceiraTauani,
+    cabeceiraJade,
+    cabeceiraGessi,
+    cabeceiraSimone
+
 ];

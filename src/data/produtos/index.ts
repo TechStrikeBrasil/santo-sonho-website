@@ -31,6 +31,12 @@ import { cabeceiraGessi } from "./cabeceira-gessi";
 import { cabeceiraSimone } from "./cabeceira-simone";
 import { recamier } from "./box-recamier";
 
+import { travesseiroCamomile } from "./travesseiro-camomile";
+import { travesseiroEuroflex } from "./travesseiro-euroflex";
+import { travesseiroIonsPrata } from "./travesseiro-ions-de-prata";
+import { travesseiroBambuFirme } from "./travesseiro-bambu-firme";
+
+import { travesseiroCorpo } from "./travesseiro-corpo-visco";
 export const PRODUTOS = [
 // COLCHÕES
     eminence,
@@ -67,6 +73,15 @@ export const PRODUTOS = [
     cabeceiraTauani,
     cabeceiraJade,
     cabeceiraGessi,
-    cabeceiraSimone
+    cabeceiraSimone,
+
+// TRAVESSEIROS
+    travesseiroCamomile,
+    travesseiroEuroflex,
+    travesseiroIonsPrata,
+    travesseiroBambuFirme,
+    travesseiroCorpo,
+
+
 
 ];

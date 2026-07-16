@@ -44,6 +44,10 @@ import { travesseiroToquePlumas } from "./travesseiro-toque-pluma";
 import { travesseiroLatexSense18 } from "./travesseiro-latex-sense-18";
 import { travesseiroLatexNatural } from "./travesseiro-latex-natural";
 import { travesseiroDubai } from "./travesseiro-dubai";
+import { cascaOvo } from "./acessorio-casca-ovo";
+import { descansoTriangulo } from "./acessorio-descanso-triangulo";
+import { rampaAntirefluxo } from "./acessorio-rampa-antirefluxo";
+import { triRelax } from "./acessorio-tri-relax";
 
 export const PRODUTOS = [
 // COLCHÕES
@@ -96,6 +100,12 @@ export const PRODUTOS = [
     travesseiroToquePlumas,
     travesseiroLatexSense18,
     travesseiroLatexNatural,
-    travesseiroDubai
+    travesseiroDubai,
+
+// ACESSÓRIOS
+    cascaOvo,
+    descansoTriangulo,
+    rampaAntirefluxo,
+    triRelax
 
 ];

@@ -17,7 +17,7 @@ export const cabeceiraTauani: Produto = {
 
   nome: "Cabeceira - Tauani",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

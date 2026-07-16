@@ -17,7 +17,7 @@ export const cabeceiraDebora: Produto = {
 
   nome: "Cabeceira - Débora",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

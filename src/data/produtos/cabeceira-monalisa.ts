@@ -17,7 +17,7 @@ export const cabeceiraMonalisa: Produto = {
 
   nome: "Cabeceira - Monalisa",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

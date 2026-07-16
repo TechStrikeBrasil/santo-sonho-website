@@ -17,7 +17,7 @@ export const cabeceiraSimone: Produto = {
 
   nome: "Cabeceira - Simone",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

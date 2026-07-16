@@ -19,8 +19,8 @@ const CATEGORIAS: (Produto["categoria"] | "Todos")[] = [
     "Colchão",
     "Box",
     "Baús",
-    "Cabeceira",
-    "Travesseiro",
+    "Cabeceiras",
+    "Travesseiros",
     "Acessórios",
 ];
 

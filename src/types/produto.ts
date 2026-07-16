@@ -2,8 +2,8 @@ export type CategoriaProduto =
     | "Colchão"
     | "Box"
     | "Baús"
-    | "Cabeceira"
-    | "Travesseiro"
+    | "Cabeceiras"
+    | "Travesseiros"
     | "Acessórios";
 
 export interface Especificacao {

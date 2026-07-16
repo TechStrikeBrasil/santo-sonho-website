@@ -17,7 +17,7 @@ export const cabeceiraJade: Produto = {
 
   nome: "Cabeceira - Jade",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

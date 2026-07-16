@@ -17,7 +17,7 @@ export const cabeceiraGessi: Produto = {
 
   nome: "Cabeceira - Gessi",
 
-  categoria: "Cabeceira",
+  categoria: "Cabeceiras",
 
   descricao:
     "As cabeceiras em tecido linho unem sofisticação, conforto e "+

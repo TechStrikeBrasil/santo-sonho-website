@@ -35,8 +35,16 @@ import { travesseiroCamomile } from "./travesseiro-camomile";
 import { travesseiroEuroflex } from "./travesseiro-euroflex";
 import { travesseiroIonsPrata } from "./travesseiro-ions-de-prata";
 import { travesseiroBambuFirme } from "./travesseiro-bambu-firme";
-
+import { travesseiroCervical } from "./travesseiro-cervical-visco";
 import { travesseiroCorpo } from "./travesseiro-corpo-visco";
+import { travesseiroToquePessego } from "./travesseiro-toque-pessego";
+import { travesseiroVisco18 } from "./travesseiro-visco-18";
+import { travesseiroLatexSense14 } from "./travesseiro-latex-sense-14";
+import { travesseiroToquePlumas } from "./travesseiro-toque-pluma";
+import { travesseiroLatexSense18 } from "./travesseiro-latex-sense-18";
+import { travesseiroLatexNatural } from "./travesseiro-latex-natural";
+import { travesseiroDubai } from "./travesseiro-dubai";
+
 export const PRODUTOS = [
 // COLCHÕES
     eminence,
@@ -81,7 +89,13 @@ export const PRODUTOS = [
     travesseiroIonsPrata,
     travesseiroBambuFirme,
     travesseiroCorpo,
-
-
+    travesseiroCervical,
+    travesseiroToquePessego,
+    travesseiroVisco18,
+    travesseiroLatexSense14,
+    travesseiroToquePlumas,
+    travesseiroLatexSense18,
+    travesseiroLatexNatural,
+    travesseiroDubai
 
 ];

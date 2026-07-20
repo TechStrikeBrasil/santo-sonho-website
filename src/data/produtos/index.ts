@@ -48,6 +48,11 @@ import { cascaOvo } from "./acessorio-casca-ovo";
 import { descansoTriangulo } from "./acessorio-descanso-triangulo";
 import { rampaAntirefluxo } from "./acessorio-rampa-antirefluxo";
 import { triRelax } from "./acessorio-tri-relax";
+import { capaProtetora } from "./acessorio-capa-protetora";
+import { protetorMalha } from "./acessorio-protetor-malha";
+import { protetorImpermeavel } from "./acessorio-protetor-impermeavel";
+import { protetorBaby } from "./acessorio-protetor-baby";
+import { poltronaPapai } from "./acessorio-poltrona-papai";
 
 export const PRODUTOS = [
 // COLCHÕES
@@ -106,6 +111,11 @@ export const PRODUTOS = [
     cascaOvo,
     descansoTriangulo,
     rampaAntirefluxo,
-    triRelax
+    triRelax,
+    poltronaPapai,
+    protetorImpermeavel,
+    protetorBaby,
+    capaProtetora,
+    protetorMalha
 
 ];

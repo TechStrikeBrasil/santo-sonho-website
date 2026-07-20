@@ -1,19 +1,10 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import toquePessego1 from "../../assets/produtos/travesseiro-toque-pessego/pessego-1.webp";
 import toquePessego2 from "../../assets/produtos/travesseiro-toque-pessego/pessego-2.webp";
 import toquePessego3 from "../../assets/produtos/travesseiro-toque-pessego/pessego-3.webp";
 import toquePessego4 from "../../assets/produtos/travesseiro-toque-pessego/pessego-4.webp";
 import toquePessego5 from "../../assets/produtos/travesseiro-toque-pessego/pessego-5.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroToquePessego: Produto = {
   id: "travesseiro-toque-pessego",

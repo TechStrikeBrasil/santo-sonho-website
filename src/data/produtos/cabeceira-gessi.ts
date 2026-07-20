@@ -1,4 +1,4 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import cabeceira1 from "../../assets/produtos/cabeceiras/gessi-1.webp";
 import cabeceira2 from "../../assets/produtos/cabeceiras/gessi-2.webp";
@@ -9,14 +9,6 @@ import corBranco from "../../assets/produtos/cores/branco-linhao.webp"
 import corCinza from "../../assets/produtos/cores/cinza-linho-mount.webp"
 import corMarrom from "../../assets/produtos/cores/linho-marrom-orpheum.webp"
 import corPreto from "../../assets/produtos/cores/preto-linho-lookout.webp"
-
-const medidasPadrao: Dimensao[] = [
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const cabeceiraGessi: Produto = {
   id: "cabeceira-gessi",
@@ -44,25 +36,25 @@ export const cabeceiraGessi: Produto = {
     cabeceira3
   ],
 
-  cores: [
+    cores: [
     {
-      nome: "Areia",
+      nome: "Bege Victory",
       imagem: corBege,
     },
     {
-      nome: "Cinza",
+      nome: "Branco Linhão",
       imagem: corBranco,
     },
     {
-      nome: "Marrom",
+      nome: "Cinza Mount",
       imagem: corCinza,
     },
     {
-      nome: "Preta",
+      nome: "Marrom Orpheum",
       imagem: corMarrom,
     },
     {
-      nome: "Branca",
+      nome: "Preto Lookout",
       imagem: corPreto,
     },
   ],

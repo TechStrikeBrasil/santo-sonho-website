@@ -44,7 +44,7 @@ export const bauSolteiro: Produto = {
 
   ],
 
-  dimensoes: [],
+  dimensoes: dimensoesColchao("0 cm"),
 
   destaque: false,
 };

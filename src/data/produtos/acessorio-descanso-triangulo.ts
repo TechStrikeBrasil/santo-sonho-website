@@ -1,14 +1,7 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import descanso1 from "../../assets/produtos/acessorios/triangulo/triangulo-1.webp";
-const medidasPadrao: Dimensao[] = [
-  
-];
 
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const descansoTriangulo: Produto = {
   id: "acessorio-triangulo",

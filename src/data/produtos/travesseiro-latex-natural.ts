@@ -1,16 +1,7 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import latexNatural1 from "../../assets/produtos/travesseiro-latex-natural/latex-natural-1.webp"
 import latexNatural2 from "../../assets/produtos/travesseiro-latex-natural/latex-natural-2.webp"
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroLatexNatural: Produto = {
   id: "travesseiro-latex-natural",

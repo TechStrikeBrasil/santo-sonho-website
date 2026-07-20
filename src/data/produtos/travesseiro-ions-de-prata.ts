@@ -1,16 +1,7 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import ionsPrata1 from "../../assets/produtos/travesseiro-ions-de-prata/ions-de-prata-1.webp";
 import ionsPrata2 from "../../assets/produtos/travesseiro-ions-de-prata/ions-de-prata-2.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroIonsPrata: Produto = {
   id: "travesseiro-ions-prata",

@@ -1,17 +1,8 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import protetorImpermeavel1 from "../../assets/produtos/acessorios/protetor-impermeavel/protetor-impermeavel-1.webp";
 import protetorImpermeavel2 from "../../assets/produtos/acessorios/protetor-impermeavel/protetor-impermeavel-2.webp";
 import protetorImpermeavel3 from "../../assets/produtos/acessorios/protetor-impermeavel/protetor-impermeavel-3.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const protetorImpermeavel: Produto = {
   id: "acessorio-protetor-impermeavel",

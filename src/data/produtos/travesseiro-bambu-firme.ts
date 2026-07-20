@@ -1,19 +1,10 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import bambuFirme1 from "../../assets/produtos/travesseiro-bambu-firme/bambu-1.webp";
 import bambuFirme2 from "../../assets/produtos/travesseiro-bambu-firme/bambu-2.webp";
 import bambuFirme3 from "../../assets/produtos/travesseiro-bambu-firme/bambu-3.webp";
 import bambuFirme4 from "../../assets/produtos/travesseiro-bambu-firme/bambu-4.webp";
 import bambuFirme5 from "../../assets/produtos/travesseiro-bambu-firme/bambu-5.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroBambuFirme: Produto = {
   id: "travesseiro-bambu-firme",

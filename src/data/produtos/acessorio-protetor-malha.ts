@@ -1,16 +1,7 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import protetorMalha1 from "../../assets/produtos/acessorios/protetor-malha/protetor-malha-1.webp";
 import protetorMalha2 from "../../assets/produtos/acessorios/protetor-malha/protetor-malha-2.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const protetorMalha: Produto = {
   id: "acessorio-protetor-malha",

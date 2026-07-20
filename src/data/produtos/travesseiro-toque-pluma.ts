@@ -1,16 +1,8 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import toquePluma1 from "../../assets/produtos/travesseiro-toque-de-plumas/toque-plumas-1.webp";
 import toquePluma2 from "../../assets/produtos/travesseiro-toque-de-plumas/toque-plumas-2.webp";
 
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroToquePlumas: Produto = {
   id: "travesseiro-toque-pluma",

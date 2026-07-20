@@ -45,7 +45,7 @@ export const baseBoxAuxiliar: Produto = {
 
   ],
 
-  dimensoes: [],
+  dimensoes: dimensoesColchao("0 cm"),
 
   destaque: false,
 };

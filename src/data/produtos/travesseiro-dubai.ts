@@ -1,17 +1,9 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import dubai1 from "../../assets/produtos/travesseiro-dubai-14/dubai-1.webp";
 import dubai2 from "../../assets/produtos/travesseiro-dubai-14/dubai-2.webp";
 import dubai3 from "../../assets/produtos/travesseiro-dubai-14/dubai-3.webp";
 
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroDubai: Produto = {
   id: "travesseiro-dubai",

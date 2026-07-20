@@ -1,4 +1,4 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import cabeceira1 from "../../assets/produtos/cabeceiras/tauani-1.webp";
 import cabeceira2 from "../../assets/produtos/cabeceiras/tauani-2.webp";
@@ -10,13 +10,6 @@ import corCinza from "../../assets/produtos/cores/cinza-linho-mount.webp"
 import corMarrom from "../../assets/produtos/cores/linho-marrom-orpheum.webp"
 import corPreto from "../../assets/produtos/cores/preto-linho-lookout.webp"
 
-const medidasPadrao: Dimensao[] = [
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const cabeceiraTauani: Produto = {
   id: "cabeceira-tauani",

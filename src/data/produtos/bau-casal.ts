@@ -54,7 +54,7 @@ export const bauCasal: Produto = {
 
   ],
 
-  dimensoes: [],
+  dimensoes: dimensoesColchao("0 cm"),
 
   destaque: false,
 };

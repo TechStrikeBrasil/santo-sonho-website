@@ -1,18 +1,8 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import latexSense1 from "../../assets/produtos/travesseiro-latex-sense-18/latex-sense-1.webp";
 import latexSense2 from "../../assets/produtos/travesseiro-latex-sense-18/latex-sense-2.webp";
 import latexSense3 from "../../assets/produtos/travesseiro-latex-sense-18/latex-sense-3.webp";
-
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const travesseiroLatexSense18: Produto = {
   id: "travesseiro-latex-sense-18",

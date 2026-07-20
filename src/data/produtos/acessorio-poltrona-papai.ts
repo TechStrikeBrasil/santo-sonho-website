@@ -1,4 +1,4 @@
-import type { Produto, Dimensao } from "../../types/produto";
+import type { Produto } from "../../types/produto";
 
 import poltronaPapai1 from "../../assets/produtos/acessorios/poltrona-papai/poltrona-papai-1.webp";
 import poltronaPapai2 from "../../assets/produtos/acessorios/poltrona-papai/poltrona-papai-2.webp";
@@ -6,15 +6,6 @@ import poltronaPapai3 from "../../assets/produtos/acessorios/poltrona-papai/polt
 import poltronaPapai4 from "../../assets/produtos/acessorios/poltrona-papai/poltrona-papai-4.webp";
 import poltronaPapai5 from "../../assets/produtos/acessorios/poltrona-papai/poltrona-papai-5.webp";
 import poltronaPapai6 from "../../assets/produtos/acessorios/poltrona-papai/poltrona-papai-6.webp";
-
-const medidasPadrao: Dimensao[] = [
-  
-];
-
-const dimensoesColchao = (altura: string): Dimensao[] => [
-  { label: "Altura", value: altura },
-  ...medidasPadrao,
-];
 
 export const poltronaPapai: Produto = {
   id: "acessorio-poltrona-papai",

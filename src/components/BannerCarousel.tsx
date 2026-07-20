@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import bannerPromoNew from "../assets/banners/banner-promo-new.png";
-import bannerStrongNew from "../assets/banners/banner-strong-new.png";
-import bannerAnoNovo from "../assets/banners/banner-ano-novo.jpg";
-import bannerColchaoStrong from "../assets/banners/banner-colchao-strong.jpg";
-import bannerColchaoVelho from "../assets/banners/banner-colchao-velho.jpg";
-import bannerSitePromo from "../assets/banners/banner-site-promo.jpg";
+
+import banner1 from "../assets/banners/banner-1.webp"
+import banner2 from "../assets/banners/banner-2.webp"
+import banner3 from "../assets/banners/banner-3.webp"
 
 // Para adicionar um novo banner:
 // 1. Faça upload da imagem e gere o pointer com `lovable-assets create`
@@ -19,12 +17,9 @@ export type Banner = {
 };
 
 export const BANNERS: Banner[] = [
-  { src: bannerPromoNew, alt: "Nova promoção - Ofertas imperdíveis" },
-  { src: bannerStrongNew, alt: "Colchão Strong - O primeiro bodybuilder do Brasil." },
-  { src: bannerAnoNovo, alt: "Ano Novo de sono renovado - colchões com até 50% de desconto" },
-  { src: bannerColchaoStrong, alt: "Colchão Strong - Conforto e qualidade para o seu sono" },
-  { src: bannerColchaoVelho, alt: "Colchão Velho - Solução para o seu descanso" },
-  { src: bannerSitePromo, alt: "Promoção do site - Ofertas imperdíveis" },
+  { src: banner1, alt: "Promoção compre o colchão e ganhe o box." },
+  { src: banner2, alt: "Colchão Strong - O primeiro colchão bodybuilder do Brasil." },
+  { src: banner3, alt: "Eminence: Colchão australiano de alto padrão." },
 ];
 
 const INTERVALO_MS = 7000;

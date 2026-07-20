@@ -4,6 +4,12 @@ import cabeceira1 from "../../assets/produtos/cabeceiras/tauani-1.webp";
 import cabeceira2 from "../../assets/produtos/cabeceiras/tauani-2.webp";
 import cabeceira3 from "../../assets/produtos/cabeceiras/tauani-3.webp";
 
+import corBege from "../../assets/produtos/cores/bege-linho-victory.webp"
+import corBranco from "../../assets/produtos/cores/branco-linhao.webp"
+import corCinza from "../../assets/produtos/cores/cinza-linho-mount.webp"
+import corMarrom from "../../assets/produtos/cores/linho-marrom-orpheum.webp"
+import corPreto from "../../assets/produtos/cores/preto-linho-lookout.webp"
+
 const medidasPadrao: Dimensao[] = [
 ];
 
@@ -36,6 +42,29 @@ export const cabeceiraTauani: Produto = {
     cabeceira1,
     cabeceira2,
     cabeceira3
+  ],
+
+    cores: [
+    {
+      nome: "Bege Victory",
+      imagem: corBege,
+    },
+    {
+      nome: "Branco Linhão",
+      imagem: corBranco,
+    },
+    {
+      nome: "Cinza Mount",
+      imagem: corCinza,
+    },
+    {
+      nome: "Marrom Orpheum",
+      imagem: corMarrom,
+    },
+    {
+      nome: "Preto Lookout",
+      imagem: corPreto,
+    },
   ],
 
   caracteristicas: [

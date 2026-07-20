@@ -136,12 +136,39 @@ function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOp
               )}
             </div>
 
+            
+
             <div className="p-6 md:p-8 flex flex-col">
               <DialogHeader>
                 <span className="text-xs font-semibold tracking-wider uppercase text-[var(--brand)]/70">{produto.categoria}</span>
                 <DialogTitle className="font-display text-2xl md:text-3xl font-bold mt-1 text-left">{produto.nome}</DialogTitle>
                 <DialogDescription className="text-left text-sm text-muted-foreground mt-2">{produto.descricao}</DialogDescription>
               </DialogHeader>
+
+              {produto.cores && produto.cores.length > 0 && (
+                <div className="mt-2">
+                  <h4 className="font-display font-semibold text-base mb-3">
+                    Cores disponíveis
+                  </h4>
+
+                  <div className="grid grid-cols-5 gap-3">
+                    {produto.cores.map((cor) => (
+                      <div key={cor.nome} className="text-center">
+                        <img
+                          src={cor.imagem}
+                          alt={cor.nome}
+                          loading="lazy"
+                          className="aspect-square w-full object-cover rounded-lg border border-border"
+                        />
+
+                        <p className="mt-2 text-xs font-medium">
+                          {cor.nome}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {produto.especificacoes && produto.especificacoes.length > 0 && (
                 <div className="mt-6">

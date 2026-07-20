@@ -27,6 +27,11 @@ export interface Produto {
     imagem: string;
     galeria?: string[];
 
+    cores?: {
+        nome: string,
+        imagem: string
+    }[];
+
     caracteristicas: string[];
 
     especificacoes?: Especificacao[];

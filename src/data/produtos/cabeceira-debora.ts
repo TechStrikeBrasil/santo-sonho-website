@@ -48,7 +48,7 @@ export const cabeceiraDebora: Produto = {
 
   ],
 
-  dimensoes: dimensoesColchao("0 cm"),
+  dimensoes: [],
 
   destaque: false,
 };

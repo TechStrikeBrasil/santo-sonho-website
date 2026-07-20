@@ -50,7 +50,7 @@ export const travesseiroEuroflex: Produto = {
     },
   ],
 
-  dimensoes: dimensoesColchao("0 cm"),
+  dimensoes: [],
 
   destaque: false,
 };

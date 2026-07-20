@@ -59,7 +59,7 @@ export const travesseiroBambuFirme: Produto = {
     },
   ],
 
-  dimensoes: dimensoesColchao("0 cm"),
+  dimensoes: [],
 
   destaque: false,
 };

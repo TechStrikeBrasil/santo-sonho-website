@@ -36,7 +36,7 @@ export const triRelax: Produto = {
 
   ],
 
-  dimensoes: dimensoesColchao("0 cm"),
+  dimensoes: [],
 
   destaque: false,
 };

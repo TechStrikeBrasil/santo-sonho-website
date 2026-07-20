@@ -43,7 +43,7 @@ export const travesseiroCervical: Produto = {
     },
   ],
 
-  dimensoes: dimensoesColchao("0 cm"),
+  dimensoes: [],
 
   destaque: false,
 };

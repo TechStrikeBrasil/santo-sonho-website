@@ -10,13 +10,13 @@ import poltronaPapai6 from "../../assets/produtos/acessorios/poltrona-papai/polt
 export const poltronaPapai: Produto = {
   id: "acessorio-poltrona-papai",
 
-  nome: "Poltrona do Papai Relax",
+  nome: "Poltrona do Papai Massageadora Reclinável Relaxmedic",
 
   categoria: "Acessórios",
 
   descricao:
-    "Agora, você pode desfrutar de um momento relaxante e totalmente revigorante com a Poltrona do Papai da Relaxmedic, um produto especialmente desenvolvido para proporcionar uma sensação única de bem-estar. "+
-    "Possui 8 motores de vibração, sendo 2 na região dos ombros, 2 na região da lombar, 2 na região dos glúteos e 2 na região da panturrilha.",
+    "Desfrute de momentos de conforto e relaxamento com a Poltrona do Papai Massageadora Relaxmedic. Com 8 motores de vibração, reclinação ajustável de 90° a 135° e controle remoto integrado, ela proporciona uma experiência personalizada para aliviar as tensões do dia a dia e renovar suas energias. "+
+    "Seu design anatômico e elegante combina com qualquer ambiente, tornando-se a escolha ideal para quem busca mais conforto, bem-estar e qualidade de vida.",
 
   imagem: poltronaPapai1,
 
@@ -32,33 +32,29 @@ export const poltronaPapai: Produto = {
 
   caracteristicas: [
     "8 Motores de Vibração",
-    "5 Ritmos de massagem"
+    "Massagem em ombros, costas, lombar, glúteos e panturrilhas",
+    "5 Programas de massagem",
+    "3 níveis de intensidade",
+    "Reclinação manual de 90° a 135°",
+    "Temporizador automático de 5 a 25 minutos",
+    "Controle remoto multifuncional integrado",
+    "Design ergonômico e confortável"
   ],
 
   especificacoes: [
     {
-      label: "Modelo",
-      value: "RM-PM2121A B (preta) / RM-PM2121A BR (marrom)"
+      label: "Descanso",
+      value: "Auxilia no alívio do estresse e da tensão muscular"
     },
     {
-      label: "Dimensões",
-      value: "Fechada: 101,5 x 79 x 97 / Reclinada: 79,5 x 79 x 164cm"
+      label: "Aumento do Bem Estar",
+      value: "Promove relaxamento e sensação de bem-estar."
     },
     {
-      label: "Suporte",
-      value: "Suporta até 110 kg"
-    },
-    {
-      label: "Densidade",
-      value: "Espuma 20D"
-    },
-    {
-      label: "Alimentação",
-      value: "Bivolt (110/220v)"
+      label: "Praticidade",
+      value: "Ideal para uso residencial, oferecendo praticidade sempre que desejar uma massagem."
     }
-
   ],
-
   dimensoes: [],
 
   destaque: false,

@@ -7,12 +7,13 @@ import protetorImpermeavel3 from "../../assets/produtos/acessorios/protetor-impe
 export const protetorImpermeavel: Produto = {
   id: "acessorio-protetor-impermeavel",
 
-  nome: "Protetor Impermeável para Colchão",
+  nome: "Protetor de Colchão Impermeável Central do Alérgico",
 
   categoria: "Acessórios",
 
   descricao:
-    "Protetor em Matelassê IMPERMEÁVEL para colchão. Fabricado em Algodão e Poliéster.",
+    "Proteja seu colchão contra líquidos, sujeiras e o desgaste diário com o Protetor de Colchão Impermeável Matelassê. Produzido com tecido de toque macio e acabamento matelassado, ele proporciona mais conforto durante o sono, além de aumentar a durabilidade do colchão. "+
+    "Sua camada impermeável impede a passagem de líquidos, ajudando a manter o colchão limpo, protegido e conservado por muito mais tempo.",
 
   imagem: protetorImpermeavel1,
 
@@ -23,22 +24,32 @@ export const protetorImpermeavel: Produto = {
   ],
 
   caracteristicas: [
+    "Acabamento em matelassê",
+    "Proteção impermeável",
+    "Toque macio e confortável",
+    "Tecido superior: 67% algodão e 33% poliéster",
+    "Enchimento em manta de poliéster siliconada",
+    "Camada impermeável em PVC",
+    "Fácil de colocar, remover e lavar"
   ],
 
   especificacoes: [
     {
-      label: "Composição",
-      value: "67% algodão | 33% poliéster"
+      label: "Durabilidade",
+      value: "Prolonga a vida útil do colchão."
     },
     {
-      label: "Enchimento",
-      value: "Manta de poliéster siliconada"
+      label: "Praticidade",
+      value: "Prático, resistente e de fácil manutenção."
     },
     {
-      label: "Tamanhos",
-      value: "Disponível em diversos tamanhos."
+      label: "Proteção",
+      value: "Protege contra líquidos, sujeiras e acidentes do dia a dia."
     },
-
+    {
+      label: "Medidas disponíveis",
+      value: "Fabricado nos tamanhos Solteiro, Casa, Queen e King."
+    },
   ],
 
   dimensoes: [],

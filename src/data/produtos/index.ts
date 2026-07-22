@@ -52,6 +52,10 @@ import { protetorMalha } from "./acessorio-protetor-malha";
 import { protetorImpermeavel } from "./acessorio-protetor-impermeavel";
 import { protetorBaby } from "./acessorio-protetor-baby";
 import { poltronaPapai } from "./acessorio-poltrona-papai";
+import { shiatsu } from "./acessorio-shiatsu";
+import { puffSankonfort } from "./acessorio-puff-sankonfort";
+import { protetorProtectSoft } from "./acessorio-protetor-protect-soft";
+import { esteiraMassageadora } from "./acessorio-esteira-massageadora";
 
 export const PRODUTOS = [
 // COLCHÕES
@@ -106,10 +110,14 @@ export const PRODUTOS = [
     travesseiroDubai,
 
 // ACESSÓRIOS
+    shiatsu,
+    esteiraMassageadora,
+    puffSankonfort,
     cascaOvo,
     descansoTriangulo,
     rampaAntirefluxo,
     triRelax,
+    protetorProtectSoft,
     poltronaPapai,
     protetorImpermeavel,
     protetorBaby,

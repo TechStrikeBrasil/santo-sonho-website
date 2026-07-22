@@ -34,7 +34,7 @@ export const capaProtetora: Produto = {
   especificacoes: [
     {
       label: "Medidas",
-      value: "50x70 cm"
+      value: "45x65 cm"
     },
     {
       label: "Higiênico",

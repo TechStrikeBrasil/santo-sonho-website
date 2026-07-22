@@ -56,6 +56,11 @@ import { shiatsu } from "./acessorio-shiatsu";
 import { puffSankonfort } from "./acessorio-puff-sankonfort";
 import { protetorProtectSoft } from "./acessorio-protetor-protect-soft";
 import { esteiraMassageadora } from "./acessorio-esteira-massageadora";
+import { colchoneteCamping } from "./acessorio-colchonete-camping";
+import { capaTrisoft } from "./acessorio-capa-trisoft";
+import { apoioPernas } from "./acessorio-apoio-pernas";
+import { granHotel } from "./gran-hotel";
+import { sagres } from "./sagres";
 
 export const PRODUTOS = [
 // COLCHÕES
@@ -66,6 +71,8 @@ export const PRODUTOS = [
     serraDaEstrela,
     diamondPlus,
     luxury,
+    sagres,
+    granHotel,
     grandPalace,
     palacioDeSintra,
     strong,
@@ -112,6 +119,8 @@ export const PRODUTOS = [
 // ACESSÓRIOS
     shiatsu,
     esteiraMassageadora,
+    colchoneteCamping,
+    apoioPernas,
     puffSankonfort,
     cascaOvo,
     descansoTriangulo,
@@ -121,6 +130,7 @@ export const PRODUTOS = [
     poltronaPapai,
     protetorImpermeavel,
     protetorBaby,
+    capaTrisoft,
     capaProtetora,
     protetorMalha
 

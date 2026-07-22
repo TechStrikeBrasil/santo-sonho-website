@@ -5,6 +5,10 @@ import viseu2 from "../../assets/produtos/viseu/viseu-2.webp";
 import viseu3 from "../../assets/produtos/viseu/viseu-3.webp";
 import viseu4 from "../../assets/produtos/viseu/viseu-4.webp";
 import viseu5 from "../../assets/produtos/viseu/viseu-5.webp";
+import viseu6 from "../../assets/produtos/viseu/viseu-6.webp";
+import viseu7 from "../../assets/produtos/viseu/viseu-7.webp";
+import viseu8 from "../../assets/produtos/viseu/viseu-8.webp";
+
 
 const medidasPadrao: Dimensao[] = [
   { label: "Solteiro", value: "0,88 x 1,88 m" },
@@ -41,6 +45,9 @@ export const viseu: Produto = {
     viseu3,
     viseu4,
     viseu5,
+    viseu6,
+    viseu7,
+    viseu8
   ],
 
   caracteristicas: [

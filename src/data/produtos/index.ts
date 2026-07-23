@@ -1,5 +1,4 @@
 import { viseu } from "./viseu";
-import { atenas } from "./atenas";
 import { leiria } from "./leiria";
 import { barcelos } from "./barcelos";
 import { max33 } from "./max33";
@@ -45,7 +44,6 @@ import { travesseiroLatexNatural } from "./travesseiro-latex-natural";
 import { travesseiroDubai } from "./travesseiro-dubai";
 import { cascaOvo } from "./acessorio-casca-ovo";
 import { descansoTriangulo } from "./acessorio-descanso-triangulo";
-import { rampaAntirefluxo } from "./acessorio-rampa-antirefluxo";
 import { triRelax } from "./acessorio-tri-relax";
 import { capaProtetora } from "./acessorio-capa-protetora";
 import { protetorMalha } from "./acessorio-protetor-malha";
@@ -61,6 +59,7 @@ import { capaTrisoft } from "./acessorio-capa-trisoft";
 import { apoioPernas } from "./acessorio-apoio-pernas";
 import { granHotel } from "./gran-hotel";
 import { sagres } from "./sagres";
+import { travesseiroExport } from "./travesseiro-export";
 
 export const PRODUTOS = [
 // COLCHÕES
@@ -81,7 +80,6 @@ export const PRODUTOS = [
     max33,
     barcelos,
     leiria,
-    atenas,
     viseu,
 //BAÚS
     bauCasal,
@@ -108,6 +106,7 @@ export const PRODUTOS = [
     travesseiroBambuFirme,
     travesseiroCorpo,
     travesseiroCervical,
+    travesseiroExport,
     travesseiroToquePessego,
     travesseiroVisco18,
     travesseiroLatexSense14,
@@ -124,7 +123,6 @@ export const PRODUTOS = [
     puffSankonfort,
     cascaOvo,
     descansoTriangulo,
-    rampaAntirefluxo,
     triRelax,
     protetorProtectSoft,
     poltronaPapai,
@@ -133,5 +131,4 @@ export const PRODUTOS = [
     capaTrisoft,
     capaProtetora,
     protetorMalha
-
 ];

@@ -4,8 +4,6 @@ import strong1 from "../../assets/produtos/strong/strong-1.webp";
 import strong2 from "../../assets/produtos/strong/strong-2.webp";
 import strong3 from "../../assets/produtos/strong/strong-3.webp";
 import strong4 from "../../assets/produtos/strong/strong-4.webp";
-import strong5 from "../../assets/produtos/strong/strong-5.webp";
-import strong6 from "../../assets/produtos/strong/strong-6.webp";
 
 
 const medidasPadrao: Dimensao[] = [
@@ -43,8 +41,6 @@ export const strong: Produto = {
     strong2,
     strong3,
     strong4,
-    strong5,
-    strong6,
   ],
 
   caracteristicas: [

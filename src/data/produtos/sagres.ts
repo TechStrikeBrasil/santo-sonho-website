@@ -31,7 +31,8 @@ export const sagres: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "DESCRIÇÃO PROVISÓRIA!",
+    "O Colchão Sagres foi criado para oferecer o equilíbrio perfeito entre firmeza, conforto e sofisticação. Com molas ensacadas individualmente, sistema de conforto D45 Firme + D45 Soft e revestimento em malha com tratamento em Íons de Prata, proporciona sustentação, toque macio e mais higiene para noites de sono verdadeiramente restauradoras. "+
+    "Inspirado nas tecnologias dos Estados Unidos, Itália e França, reúne acabamento premium, alta durabilidade e conforto para transformar a qualidade do seu descanso.",
 
   imagem: sagres1,
 
@@ -47,18 +48,32 @@ export const sagres: Produto = {
   ],
 
   caracteristicas: [
-    "DESCRIÇÃO PROVISÍORIA!",
-
+    "Acabamento Premium",
+    "Tecnologia internacional",
+    "Excelente conforto e estabilidade",
+    "Ação antifúngica e antibacteriana"
   ],
 
   especificacoes: [
     {
-      label: "Suporte",
-      value: "DEFINIR!",
-    },    
+      label: "Molejo",
+      value: "Molas ensacadas individualmente em aço 2,0 mm.",
+    },
+    {
+      label: "Revestimento",
+      value: "Malha (80% Poliéster e 20% Viscose).",
+    },
+    {
+      label: "Borda Perimetral",
+      value: "D26.",
+    },
+    {
+      label: "Tratamento",
+      value: "Tratamento com Íons de Prata.",
+    },
   ],
 
-  dimensoes: dimensoesColchao("22 cm"),
+  dimensoes: dimensoesColchao("34 cm"),
 
   destaque: false,
 };

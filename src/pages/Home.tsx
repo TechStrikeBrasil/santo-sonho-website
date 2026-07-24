@@ -6,6 +6,7 @@ import { LOJAS } from "../data/lojas";
 import { SITE } from "../data/site";
 import { PRODUTOS } from "../data/produtos";
 import BannerCarousel from "../components/BannerCarousel";
+import InstagramFeed from "../components/InstagramFeed";
 
 
 
@@ -129,6 +130,7 @@ export default function Home() {
           ))}
         </div>
       </section>
+      <InstagramFeed />
     </>
   );
 }

@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Mail, Phone, MapPin, MessageCircle, Moon, CreditCard, Star, Users, BedDoubleIcon, Truck, Lock } from "lucide-react";
+import { Menu, X, Phone, MapPin, MessageCircle, Moon, CreditCard, Star, Users, BedDoubleIcon, Truck, Lock } from "lucide-react";
 import {SITE} from "../data/site";
 import { waLink, } from "../lib/whatsapp";
 import { phoneLink } from "../data/site";

@@ -30,6 +30,7 @@ const NAV = [
   { to: "/produtos", label: "Produtos" },
   { to: "/lojas", label: "Lojas" },
   { to: "/sobre", label: "Sobre" },
+  { to: "/trabalhe-conosco", label: "Trabalhe Conosco"},
   { to: "/contato", label: "Contato" },
 ];
 

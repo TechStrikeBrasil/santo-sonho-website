@@ -6,6 +6,7 @@ import Produtos from "./pages/Produtos";
 import Lojas from "./pages/Lojas";
 import Sobre from "./pages/Sobre";
 import Contato from "./pages/Contato";
+import TrabalheConosco from "./pages/TrabalheConosco";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/lojas" element={<Lojas />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/trabalhe-conosco" element={<TrabalheConosco />} />
           <Route path="/contato" element={<Contato />} />
           <Route path="*" element={<div>Not Found</div>} />
 

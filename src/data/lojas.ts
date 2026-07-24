@@ -11,5 +11,4 @@ export const LOJAS: Loja[] = [
   { cidade: "Ribeirão Pires", nome: "Miguel Prisco", endereco: "Rua Miguel Prisco, 120, Centro - Ribeirão Pires/SP", telefones: ["(11) 4828-3646"], whatsapp: "11953434831" },
   { cidade: "São Paulo", nome: "Abraão de Morais", endereco: "Av. Professor Abrãao de Morais, 225, Saúde - São Paulo/SP", telefones: ["(11) 2577-2375"], whatsapp: "11959307021" },
   { cidade: "São Paulo", nome: "Vila Mariana", endereco: "Av. Dr. Ricardo Jafet, 431, Vila Mariana - São Paulo/SP, 04261-000", telefones: ["(11) 2273-4026"], whatsapp: "11986778558" },
-  { cidade: "São Paulo", nome: "Moema", endereco: "Alameda dos Maracatins, 943, Moema - São Paulo/SP, 04089-012", telefones: ["(11) 2352-2121", "(11) 93064-2096"], whatsapp: "11930642096" },
 ];

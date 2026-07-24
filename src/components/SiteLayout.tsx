@@ -10,6 +10,12 @@ import {
 } from "react-icons/fa";
 import logo from "../assets/santo-sonho-logo.png";
 
+import { VisaFlatIcon } from "react-svg-credit-card-payment-icons";
+import { MastercardFlatIcon } from "react-svg-credit-card-payment-icons";
+import { AmericanExpressFlatIcon } from "react-svg-credit-card-payment-icons";
+import { EloFlatIcon } from "react-svg-credit-card-payment-icons";
+import { HipercardFlatIcon } from "react-svg-credit-card-payment-icons";
+
 const MARQUEE_ITEMS = [
   { icon: Star, text: "Nota 4,9/5 no Google." },
   { icon: Users, text: "Mais de 2 milhões de colchões vendidos e famílias atendidas." },
@@ -18,55 +24,6 @@ const MARQUEE_ITEMS = [
   { icon: CreditCard, text: "Parcelamento em até 24x sem juros!" },
   { icon: Truck, text: "Frete e montagem grátis!" },
 ];
-
-
-function MastercardIcon() {
-  return (
-    <svg viewBox="0 0 48 32" className="h-7 w-auto" aria-label="Mastercard">
-      <rect width="48" height="32" rx="4" fill="#fff" />
-      <circle cx="19" cy="16" r="9" fill="#EB001B" />
-      <circle cx="29" cy="16" r="9" fill="#F79E1B" />
-      <path d="M24 9.5a9 9 0 0 0 0 13 9 9 0 0 0 0-13z" fill="#FF5F00" />
-    </svg>
-  );
-}
-
-function VisaIcon() {
-  return (
-    <svg viewBox="0 0 48 32" className="h-7 w-auto" aria-label="Visa">
-      <rect width="48" height="32" rx="4" fill="#1A1F71" />
-      <text x="24" y="21" textAnchor="middle" fill="#fff" fontSize="12" fontWeight="700" fontStyle="italic">VISA</text>
-    </svg>
-  );
-}
-
-function EloIcon() {
-  return (
-    <svg viewBox="0 0 48 32" className="h-7 w-auto" aria-label="Elo">
-      <rect width="48" height="32" rx="4" fill="#fff" />
-      <text x="24" y="21" textAnchor="middle" fill="#000" fontSize="13" fontWeight="800">Elo</text>
-    </svg>
-  );
-}
-
-function AmexIcon() {
-  return (
-    <svg viewBox="0 0 48 32" className="h-7 w-auto" aria-label="American Express">
-      <rect width="48" height="32" rx="4" fill="#016FD0" />
-      <text x="24" y="21" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="800">AMEX</text>
-    </svg>
-  );
-}
-
-function HiperIcon() {
-  return (
-    <svg viewBox="0 0 48 32" className="h-7 w-auto" aria-label="Hiper">
-      <rect width="48" height="32" rx="4" fill="#D9222A" />
-      <text x="24" y="21" textAnchor="middle" fill="#fff" fontSize="10" fontWeight="800">HIPER</text>
-    </svg>
-  );
-}
-
 
 const NAV = [
   { to: "/", label: "Início" },
@@ -229,11 +186,11 @@ function Footer() {
             Parcelamos em até 24x sem juros.
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            <MastercardIcon />
-            <VisaIcon />
-            <EloIcon />
-            <AmexIcon />
-            <HiperIcon />
+            <VisaFlatIcon width={48} />
+            <MastercardFlatIcon width={48}/>
+            <AmericanExpressFlatIcon width={48}/>
+            <EloFlatIcon width={48}/>
+            <HipercardFlatIcon width={48}/>
           </div>
         </div>
       </div>

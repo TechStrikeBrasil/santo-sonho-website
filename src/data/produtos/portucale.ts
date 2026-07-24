@@ -1,11 +1,11 @@
 import type { Produto, Dimensao } from "../../types/produto";
 
-import portocale1 from "../../assets/produtos/portocale/portocale-1.webp";
-import portocale2 from "../../assets/produtos/portocale/portocale-2.webp";
-import portocale3 from "../../assets/produtos/portocale/portocale-3.webp";
-import portocale4 from "../../assets/produtos/portocale/portocale-4.webp";
-import portocale5 from "../../assets/produtos/portocale/portocale-5.webp";
-import portocale6 from "../../assets/produtos/portocale/portocale-6.webp";
+import portucale1 from "../../assets/produtos/portucale/portucale-1.webp";
+import portucale2 from "../../assets/produtos/portucale/portucale-2.webp";
+import portucale3 from "../../assets/produtos/portucale/portucale-3.webp";
+import portucale4 from "../../assets/produtos/portucale/portucale-4.webp";
+import portucale5 from "../../assets/produtos/portucale/portucale-5.webp";
+import portucale6 from "../../assets/produtos/portucale/portucale-6.webp";
 
 
 
@@ -23,29 +23,28 @@ const dimensoesColchao = (altura: string): Dimensao[] => [
   ...medidasPadrao,
 ];
 
-export const portocale: Produto = {
-  id: "colchao-portocale",
+export const portucale: Produto = {
+  id: "colchao-portucale",
 
-  nome: "Colchão Portocale",
+  nome: "Colchão Portucale",
 
   categoria: "Colchão",
 
   descricao:
-    "Imagine dormir com a leveza de uma brisa à beira-mar. O Colchão Portocale foi criado para transformar cada noite em uma experiência de frescor, "+
-    "conforto e sofisticação, mesmo nos climas mais quentes. "+
-    "Seu descanso se torna profundo, envolvente e revigorante, proporcionando a sensação única de acordar renovado todos os dias. Cada detalhe foi "+
-    "pensado para oferecer equilíbrio térmico, adaptação ao corpo e um conforto digno dos melhores resorts do mundo. "+
-    "O Portocale é mais do que um colchão. É o luxo de dormir bem, todos os dias",
+    "Imagine dormir com a leveza de uma brisa à beira-mar. "+
+    "O Colchão Portucale foi criado para transformar cada noite em uma experiência de frescor, conforto e sofisticação, mesmo nos climas mais quentes. Seu descanso se torna profundo, envolvente e revigorante, "+
+    "proporcionando a sensação única de acordar renovado todos os dias. Cada detalhe foi pensado para oferecer equilíbrio térmico, adaptação ao corpo e um conforto digno dos melhores resorts do mundo. " +
+    "O Portucale é mais do que um colchão. É o luxo de dormir bem, todos os dias",
 
-  imagem: portocale1,
+  imagem: portucale1,
 
   galeria: [
-    portocale1,
-    portocale2,
-    portocale3,
-    portocale4,
-    portocale5,
-    portocale6,
+    portucale1,
+    portucale2,
+    portucale3,
+    portucale4,
+    portucale5,
+    portucale6,
   ],
 
   caracteristicas: [

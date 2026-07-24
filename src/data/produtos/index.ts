@@ -3,7 +3,7 @@ import { leiria } from "./leiria";
 import { barcelos } from "./barcelos";
 import { max33 } from "./max33";
 import { porto } from "./porto";
-import { portocale } from "./portocale";
+import { portucale } from "./portucale";
 import { strong } from "./strong";
 import { palacioDeSintra } from "./palacio-de-sintra";
 import { grandPalace } from "./grand-palace";
@@ -75,7 +75,7 @@ export const PRODUTOS = [
     grandPalace,
     palacioDeSintra,
     strong,
-    portocale,
+    portucale,
     porto,
     max33,
     barcelos,

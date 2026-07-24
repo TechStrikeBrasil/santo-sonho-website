@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Mail, MapPin, MessageCircle, Moon, CreditCard, Star, Users, BedDoubleIcon, Truck, Lock } from "lucide-react";
+import { Menu, X, Mail, Phone, MapPin, MessageCircle, Moon, CreditCard, Star, Users, BedDoubleIcon, Truck, Lock } from "lucide-react";
 import {SITE} from "../data/site";
 import { waLink, } from "../lib/whatsapp";
 import { phoneLink } from "../data/site";
@@ -38,16 +38,45 @@ function Header() {
   const location = useLocation();
   return (
     <header className="sticky top-0 z-50 bg-background/85 backdrop-blur-md border-b border-border">
-      <div className="hidden md:block bg-[var(--brand)] text-brand-foreground text-xs">
-        <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
-          <div className="flex items-center gap-5">
-            <a href={`mailto:${SITE.email}`} className="flex items-center gap-1.5 hover:text-[var(--gold)]"><Mail className="size-3.5" /> {SITE.email}</a>
-            <a href={waLink(SITE.whatsappMain)} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-[var(--gold)]"><MessageCircle className="size-3.5" /> {SITE.whatsappDisplay}</a>
-          </div>
-          <div className="flex items-center gap-3">
-            <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" className="hover:text-[var(--gold)]"><FaInstagram className="size-4" /></a>
-            <a href={SITE.facebook} target="_blank" rel="noreferrer" aria-label="Facebook" className="hover:text-[var(--gold)]"><FaFacebook className="size-4" /></a>
-          </div>
+       <div className="hidden md:block bg-[var(--brand)] text-brand-foreground text-xs">
+        <div className="max-w-7xl mx-auto px-6 py-2 flex justify-end items-center gap-5">
+           <a
+        href={waLink(SITE.vendedor.phone)}
+        target="_blank"
+        rel="noreferrer"
+        className="flex items-center gap-1.5 hover:text-[var(--gold)] transition-colors"
+      >
+        <MessageCircle className="size-3.5" />
+        Televendas: {SITE.vendedor.display}
+      </a>
+
+      <a
+        href={phoneLink(SITE.sac.phone)}
+        className="flex items-center gap-1.5 hover:text-[var(--gold)] transition-colors"
+      >
+        <Phone className="size-3.5" />
+        SAC: {SITE.sac.whatsappDisplay}
+      </a>
+
+      <a
+        href={SITE.instagram}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Instagram"
+        className="hover:text-[var(--gold)] transition-colors"
+      >
+        <FaInstagram className="size-4" />
+      </a>
+
+      <a
+        href={SITE.facebook}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Facebook"
+        className="hover:text-[var(--gold)] transition-colors"
+      >
+        <FaFacebook className="size-4" />
+      </a>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">

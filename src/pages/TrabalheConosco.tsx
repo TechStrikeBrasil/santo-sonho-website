@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Briefcase, Send, CheckCircle2, Users, Heart, Building2 } from "lucide-react";
+import { useRef, useState } from "react";
+import { Briefcase, Send, CheckCircle2, Users, Heart, Building2, Upload, FileText, X, Loader2, AlertCircle } from "lucide-react";
 import { SITE } from "../data/site";
 
 const BENEFICIOS = [
@@ -9,30 +9,69 @@ const BENEFICIOS = [
 ];
 
 export default function TrabalheConosco() {
-  const [form, setForm] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    mensagem: "",
-  });
-  const [enviado, setEnviado] = useState(false);
+  // Endpoint do Cloudflare Worker que recebe o currículo e envia por e-mail.
+  const WORKER_UPLOAD_URL = "https://santo-sonho-api.tstrikebr.workers.dev/curriculo";
 
-  function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const subject = `Trabalhe Conosco — ${form.nome} || "vaga"})`;
-    const body = [
-      `Nome: ${form.nome}`,
-      `E-mail: ${form.email}`,
-      `Telefone: ${form.telefone}`,
-      "",
-      "Mensagem / Experiência:",
-      form.mensagem,
-      "",
-      "— Enviado pelo site Santo Sonho Colchões",
-    ].join("\n");
-    window.location.href = `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setEnviado(true);
+  const ACCEPTED_EXT = [".pdf", ".doc", ".docx", ".jpg", ".jpeg", ".png"];
+  const ACCEPT_ATTR = ACCEPTED_EXT.join(",");
+  const MAX_SIZE_MB = 10;
+  const MAX_SIZE_BYTES = MAX_SIZE_MB * 1024 * 1024;
+
+  function formatBytes(b: number) {
+    if (b < 1024) return `${b} B`;
+    if (b < 1024 * 1024) return `${(b / 1024).toFixed(1)} KB`;
+    return `${(b / 1024 / 1024).toFixed(2)} MB`;
   }
+
+  const [form, setForm] = useState({ nome: "", email: "", telefone: "", mensagem: "" });
+  const [file, setFile] = useState<File | null>(null);
+  const [dragOver, setDragOver] = useState(false);
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMsg, setErrorMsg] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  function validateFile(f: File): string | null {
+    const ext = "." + (f.name.split(".").pop() || "").toLowerCase();
+    if (!ACCEPTED_EXT.includes(ext)) return `Formato não aceito. Envie: ${ACCEPTED_EXT.join(", ")}`;
+    if (f.size > MAX_SIZE_BYTES) return `Arquivo muito grande. Máximo ${MAX_SIZE_MB} MB.`;
+    return null;
+  }
+
+  function handleFiles(files: FileList | null) {
+    if (!files || !files[0]) return;
+    const f = files[0];
+    const err = validateFile(f);
+    if (err) { setErrorMsg(err); setStatus("error"); return; }
+    setErrorMsg("");
+    setStatus("idle");
+    setFile(f);
+  }
+
+  async function onSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    if (!file) { setErrorMsg("Anexe seu currículo antes de enviar."); setStatus("error"); return; }
+    setStatus("sending");
+    setErrorMsg("");
+    try {
+      const fd = new FormData();
+      fd.append("nome", form.nome);
+      fd.append("email", form.email);
+      fd.append("telefone", form.telefone);
+      fd.append("mensagem", form.mensagem);
+      fd.append("origem", "site-santo-sonho");
+      fd.append("curriculo", file, file.name);
+
+      const res = await fetch(WORKER_UPLOAD_URL, { method: "POST", body: fd });
+      if (!res.ok) throw new Error(`Falha no envio (HTTP ${res.status})`);
+      setStatus("success");
+      setForm({ nome: "", email: "", telefone: "", mensagem: "" });
+      setFile(null);
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err instanceof Error ? err.message : "Erro inesperado ao enviar.");
+    }
+  }
+
 
   return (
     <>
@@ -70,15 +109,25 @@ export default function TrabalheConosco() {
         <div className="bg-card rounded-2xl border border-border shadow-[var(--shadow-card)] p-8 md:p-10">
           <h2 className="font-display text-2xl md:text-3xl font-bold">Envie seu currículo</h2>
           <p className="text-muted-foreground mt-2 text-sm">
-            Preencha o formulário abaixo. Você será direcionado ao seu app de e-mail para concluir o envio (anexe seu currículo).
+              Preencha seus dados e anexe seu currículo. Aceitamos {ACCEPTED_EXT.join(", ")} (até {MAX_SIZE_MB} MB).
           </p>
 
-          {enviado && (
+          {status === "success" && (
             <div className="mt-6 flex items-start gap-3 rounded-xl border border-green-500/30 bg-green-500/10 p-4 text-sm">
               <CheckCircle2 className="size-5 text-green-600 shrink-0 mt-0.5" />
               <div>
-                <p className="font-semibold text-green-700">E-mail preparado!</p>
-                <p className="text-muted-foreground">Finalize o envio no seu app de e-mail e não esqueça de anexar o currículo em PDF.</p>
+                 <p className="font-semibold text-green-700">Currículo enviado!</p>
+                <p className="text-muted-foreground">Recebemos sua candidatura e retornaremos em breve.</p>
+              </div>
+            </div>
+          )}
+
+          {status === "error" && errorMsg && (
+            <div className="mt-6 flex items-start gap-3 rounded-xl border border-red-500/30 bg-red-500/10 p-4 text-sm">
+              <AlertCircle className="size-5 text-red-600 shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold text-red-700">Não foi possível enviar</p>
+                <p className="text-muted-foreground">{errorMsg}</p>
               </div>
             </div>
           )}
@@ -101,16 +150,80 @@ export default function TrabalheConosco() {
             </label>
             <label className="grid gap-1.5 md:col-span-2">
               <span className="text-sm font-medium">Mensagem / Experiência</span>
-              <textarea rows={5} value={form.mensagem} onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
+              <textarea rows={4} value={form.mensagem} onChange={(e) => setForm({ ...form, mensagem: e.target.value })}
                 placeholder="Conte um pouco sobre você e sua experiência profissional."
                 className="rounded-lg border border-border bg-background px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--brand)]/40" />
             </label>
+             <div className="md:col-span-2 grid gap-1.5">
+              <span className="text-sm font-medium">Currículo *</span>
+
+              {!file ? (
+                <div
+                  onClick={() => inputRef.current?.click()}
+                  onDragOver={(e) => { e.preventDefault(); setDragOver(true); }}
+                  onDragLeave={() => setDragOver(false)}
+                  onDrop={(e) => { e.preventDefault(); setDragOver(false); handleFiles(e.dataTransfer.files); }}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); inputRef.current?.click(); } }}
+                  className={`cursor-pointer rounded-xl border-2 border-dashed p-8 text-center transition ${
+                    dragOver
+                      ? "border-[var(--brand)] bg-[var(--brand)]/5"
+                      : "border-border hover:border-[var(--brand)]/60 hover:bg-muted/40"
+                  }`}
+                >
+                  <div className="mx-auto size-12 rounded-full bg-[var(--brand)]/10 grid place-items-center text-[var(--brand)]">
+                    <Upload className="size-6" />
+                  </div>
+                  <p className="mt-3 text-sm font-medium">Clique para escolher ou arraste seu arquivo aqui</p>
+                  <p className="text-xs text-muted-foreground mt-1">{ACCEPTED_EXT.join(", ")} — máx. {MAX_SIZE_MB} MB</p>
+                </div>
+              ) : (
+                <div className="flex items-center gap-3 rounded-xl border border-border bg-muted/30 p-4">
+                  <div className="size-10 rounded-lg bg-[var(--brand)]/10 grid place-items-center text-[var(--brand)] shrink-0">
+                    <FileText className="size-5" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm font-medium truncate">{file.name}</p>
+                    <p className="text-xs text-muted-foreground">{formatBytes(file.size)}</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => { setFile(null); if (inputRef.current) inputRef.current.value = ""; }}
+                    className="size-8 rounded-full grid place-items-center hover:bg-background transition text-muted-foreground hover:text-foreground"
+                    aria-label="Remover arquivo"
+                  >
+                    <X className="size-4" />
+                  </button>
+                </div>
+              )}
+
+              <input
+                ref={inputRef}
+                type="file"
+                accept={ACCEPT_ATTR}
+                className="hidden"
+                onChange={(e) => handleFiles(e.target.files)}
+              />
+            </div>
+
+
+
             <div className="md:col-span-2 flex flex-wrap items-center gap-3 pt-2">
-              <button type="submit"
-                className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] text-brand-foreground px-6 py-3 font-semibold hover:opacity-90 transition">
-                <Send className="size-4" /> Enviar candidatura
+               <button
+                type="submit"
+                disabled={status === "sending"}
+                className="inline-flex items-center gap-2 rounded-full bg-[var(--brand)] text-brand-foreground px-6 py-3 font-semibold hover:opacity-90 transition disabled:opacity-60 disabled:cursor-not-allowed"
+              >
+                {status === "sending" ? (
+                  <><Loader2 className="size-4 animate-spin" /> Enviando...</>
+                ) : (
+                  <><Send className="size-4" /> Enviar candidatura</>
+                )}
               </button>
-              <p className="text-xs text-muted-foreground">Ou envie diretamente para <a href={`mailto:${SITE.email}`} className="underline hover:text-[var(--brand)]">{SITE.email}</a></p>
+               <p className="text-xs text-muted-foreground">
+                Ou envie diretamente para <a href={`mailto:${SITE.email}`} className="underline hover:text-[var(--brand)]">{SITE.email}</a>
+              </p>
             </div>
           </form>
         </div>

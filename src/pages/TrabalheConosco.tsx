@@ -222,7 +222,7 @@ export default function TrabalheConosco() {
                 )}
               </button>
                <p className="text-xs text-muted-foreground">
-                Ou envie diretamente para <a href={`mailto:${SITE.email}`} className="underline hover:text-[var(--brand)]">{SITE.email}</a>
+                Ou envie diretamente para <a href={`mailto:${SITE.cvemail}`} className="underline hover:text-[var(--brand)]">{SITE.cvemail}</a>
               </p>
             </div>
           </form>

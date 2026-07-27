@@ -82,7 +82,7 @@ function Header() {
       </div>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Santo Sonho Colchões" className="size-12 rounded-full object-cover" />
+          <img src={logo} alt="Santo Sonho Colchões" className="size-18 rounded-full object-cover" />
           <div className="leading-tight">
             <div className="font-display font-bold text-lg text-[var(--brand)]">Santo Sonho</div>
             <div className="text-[15px] uppercase tracking-widest font-bold text-lg  text-[var(--brand)]">Colchões</div>

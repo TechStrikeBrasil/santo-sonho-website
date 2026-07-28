@@ -30,10 +30,10 @@ export const diamondPlus: Produto = {
   categoria: "Colchão",
 
   descricao:
-    "O colchão King Koil Diamond oferece o melhor em tecnologia, além de possuir um design rico em detalhes HD, realçando ainda mais a sua beleza. "+
-    "Espuma Ultrasoft Foam é uma camada adicional de alta resiliência e suporte. Esta espuma possui alta performance e maciez, adapta-se perfeitamente "+
-    "aos contornos do corpo, proporcionando o máximo de conforto",
-
+    "O Colchão Diamond Plus foi desenvolvido para oferecer conforto, estabilidade e durabilidade. "+
+    "Sua estrutura com molas ensacadas individualmente de aço 2.0 proporciona excelente sustentação, reduz a transferência de movimentos e garante noites de sono mais tranquilas. " +
+    "Conta ainda com tratamento antibacteriano, promovendo um ambiente de descanso mais limpo e saudável. Com acabamento refinado e suporte para até 250 kg por pessoa, o Diamond Plus é a escolha ideal para quem busca qualidade, resistência e conforto em um único colchão.",
+    
   imagem: diamond1,
 
   galeria: [
@@ -46,8 +46,10 @@ export const diamondPlus: Produto = {
   ],
 
   caracteristicas: [
-    "Macio e Confortável",
-    "Espuma de Ultrasoft",
+    "Acabamento Premium",
+    "Tratamento antibacteriano",
+    "Excelente estabilidade durante o sono",
+    "Alta resistência e durabilidade"
   ],
 
   especificacoes: [
@@ -57,15 +59,15 @@ export const diamondPlus: Produto = {
     },
     {
       label: "Tipo de molas",
-      value: "Molejo Comfort Edge Double Coil 25cm.",
+      value: "Molas ensacadas individualmente em aço 2.0",
     },
     {
-      label: "Tecido",
-      value: "Malha Belga da Lava de altíssima gramatura com Tencel, lateral em Linho.",
+      label: "Suporte",
+      value: "Até 250 kg por pessoa.",
     },
     {
       label: "Tratamento",
-      value: "Antiácaro, antimofo, antialérgico, antifungos e antibactérias. Íons de Prata, Purotex.",
+      value: "Antibacteriano.",
     },
   ],
 

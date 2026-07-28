@@ -3,12 +3,13 @@ export const SITE = {
   tagline: "Porque dormir bem, faz bem!",
   email: "contato@santosonhocolchoes.com.br",
   cvemail: "eduardo@santosonhocolchoes.com.br",
-  whatsappMain: "5511981985458",
-  whatsappDisplay: "(11) 98198-5458",
+  whatsappMain: "5511957355432",
+  whatsappDisplay: "(11) 95735-5432",
+//  (11) 95735-5432
    vendedor: {
     label: "Fale com um vendedor",
-    phone: "11981985458",
-    display: "(11) 98198-5458",
+    phone: "11957355432",
+    display: "(11) 95735-5432",
   },
   sac: {
     label: "SAC - Serviço de Atendimento ao Cliente",

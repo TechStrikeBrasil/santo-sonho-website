@@ -24,9 +24,18 @@ export default function Contato() {
           <a href={waLink(SITE.whatsappMain)} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-[var(--brand)]/40 hover:shadow-[var(--shadow-card)] transition">
             <div className="size-14 rounded-2xl bg-[#25D366]/10 grid place-items-center text-[#25D366]"><MessageCircle className="size-7" /></div>
             <div>
-              <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">WhatsApp</div>
+              <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">TELEVENDAS</div>
               <div className="font-display font-bold text-lg">{SITE.whatsappDisplay}</div>
               <div className="text-sm text-muted-foreground">Resposta rápida em horário comercial</div>
+            </div>
+          </a>
+          <a href={waLink(SITE.sac.whatsapp)} target="_blank" rel="noreferrer" className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-[var(--brand)]/40 hover:shadow-[var(--shadow-card)] transition">
+            <div className="size-14 rounded-2xl bg-[#25D366]/10 grid place-items-center text-[#25D366]"><Phone className="size-7" /></div>
+            <div>
+              <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">SAC</div>
+              <div className="font-display font-bold text-lg break-all">{SITE.sac.whatsappDisplay}</div>
+              <div className="font-display font-bold text-lg break-all">{SITE.sac.phoneDisplay} | {SITE.sac.phone2Display}</div>
+              <div className="text-sm text-muted-foreground">Fale com o nosso SAC.</div>
             </div>
           </a>
           <a href={`mailto:${SITE.email}`} className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-[var(--brand)]/40 hover:shadow-[var(--shadow-card)] transition">
@@ -35,15 +44,6 @@ export default function Contato() {
               <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">E-mail</div>
               <div className="font-display font-bold text-lg break-all">{SITE.email}</div>
               <div className="text-sm text-muted-foreground">Para orçamentos e parcerias</div>
-            </div>
-          </a>
-          <a className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-[var(--brand)]/40 hover:shadow-[var(--shadow-card)] transition">
-            <div className="size-14 rounded-2xl bg-[var(--brand)]/10 grid place-items-center text-[var(--brand)]"><Phone className="size-7" /></div>
-            <div>
-              <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">SAC</div>
-              <div className="font-display font-bold text-lg break-all">{SITE.sac.phoneDisplay} | {SITE.sac.phone2Display}</div>
-              <div className="font-display font-bold text-lg break-all">{SITE.sac.whatsappDisplay}</div>
-              <div className="text-sm text-muted-foreground">Fale com o nosso SAC.</div>
             </div>
           </a>
           <div className="grid grid-cols-2 gap-4">

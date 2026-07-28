@@ -1,4 +1,4 @@
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Mail, MessageCircle, MapPin, Phone } from "lucide-react";
 import { waLink } from "../lib/whatsapp";
 import { LOJAS } from "../data/lojas";
 import { SITE } from "../data/site";
@@ -35,6 +35,15 @@ export default function Contato() {
               <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">E-mail</div>
               <div className="font-display font-bold text-lg break-all">{SITE.email}</div>
               <div className="text-sm text-muted-foreground">Para orçamentos e parcerias</div>
+            </div>
+          </a>
+          <a className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border hover:border-[var(--brand)]/40 hover:shadow-[var(--shadow-card)] transition">
+            <div className="size-14 rounded-2xl bg-[var(--brand)]/10 grid place-items-center text-[var(--brand)]"><Phone className="size-7" /></div>
+            <div>
+              <div className="text-xs font-semibold tracking-wider uppercase text-muted-foreground">SAC</div>
+              <div className="font-display font-bold text-lg break-all">{SITE.sac.phoneDisplay} | {SITE.sac.phone2Display}</div>
+              <div className="font-display font-bold text-lg break-all">{SITE.sac.whatsappDisplay}</div>
+              <div className="text-sm text-muted-foreground">Fale com o nosso SAC.</div>
             </div>
           </a>
           <div className="grid grid-cols-2 gap-4">

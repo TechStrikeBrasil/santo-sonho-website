@@ -14,6 +14,8 @@ export const SITE = {
     label: "SAC - Serviço de Atendimento ao Cliente",
     phone: "1128884778",
     phoneDisplay: "(11) 2888-4778",
+    phone2: "1129884998",
+    phone2Display: "(11) 2988-4998",
     whatsapp: "5511957355429",
     whatsappDisplay: "(11) 95735-5429",
     email: "sac@santosonhocolhoes.com.br",

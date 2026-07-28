@@ -54,10 +54,6 @@ export const diamondPlus: Produto = {
 
   especificacoes: [
     {
-      label: "Estofamento",
-      value: "Memovisco Gel D45, Látex Talalay.",
-    },
-    {
       label: "Tipo de molas",
       value: "Molas ensacadas individualmente em aço 2.0",
     },

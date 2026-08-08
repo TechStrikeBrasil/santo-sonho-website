@@ -10,7 +10,7 @@ import TrabalheConosco from "./pages/TrabalheConosco";
 
 export default function App() {
   return (
-    <BrowserRouter basename="/santo-sonho-website/">
+    <BrowserRouter basename="/">
       <Routes>
         {/* 👇 LAYOUT GLOBAL */}
         <Route element={<SiteLayout />}>

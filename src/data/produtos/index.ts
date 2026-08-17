@@ -40,7 +40,6 @@ import { travesseiroVisco18 } from "./travesseiro-visco-18";
 import { travesseiroLatexSense14 } from "./travesseiro-latex-sense-14";
 import { travesseiroToquePlumas } from "./travesseiro-toque-pluma";
 import { travesseiroLatexSense18 } from "./travesseiro-latex-sense-18";
-import { travesseiroLatexNatural } from "./travesseiro-latex-natural";
 import { travesseiroDubai } from "./travesseiro-dubai";
 import { cascaOvo } from "./acessorio-casca-ovo";
 import { descansoTriangulo } from "./acessorio-descanso-triangulo";
@@ -112,7 +111,6 @@ export const PRODUTOS = [
     travesseiroLatexSense14,
     travesseiroToquePlumas,
     travesseiroLatexSense18,
-    travesseiroLatexNatural,
     travesseiroDubai,
 
 // ACESSÓRIOS

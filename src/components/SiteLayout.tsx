@@ -226,7 +226,7 @@ function Footer() {
       </div>
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-5 text-xs text-brand-foreground/60 flex flex-col md:flex-row items-center justify-between gap-2">
-          <p>© {new Date().getFullYear()} Santo Sonho Colchões. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Santo Sonho Colchões. Todos os direitos reservados. | Desenvolvido por TechStrike Solutions</p>
           <p>{SITE.tagline}</p>
         </div>
       </div>

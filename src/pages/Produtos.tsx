@@ -27,7 +27,9 @@ const CATEGORIAS: (Produto["categoria"] | "Todos")[] = [
 export default function Produtos() {
   const [cat, setCat] = useState<(Produto["categoria"] | "Todos")>("Todos");
   const [aberto, setAberto] = useState<Produto | null>(null);
+  const [galeriaAberta, setGaleriaAberta] = useState<Produto | null>(null);
   const lista = useMemo(() => (cat === "Todos" ? PRODUTOS : PRODUTOS.filter((p) => p.categoria === cat)), [cat]);
+  
 
 return (
     <>
@@ -56,7 +58,7 @@ return (
             <article key={p.id} className="group bg-card rounded-2xl overflow-hidden border border-border shadow-[var(--shadow-card)] flex flex-col">
               <button
                 type="button"
-                onClick={() => setAberto(p)}
+                onClick={() => setGaleriaAberta(p)}
                 aria-label={`Ver detalhes de ${p.nome}`}
                 className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer"
               >
@@ -114,6 +116,10 @@ return (
       </section>
 
       <ProdutoModal produto={aberto} onOpenChange={(open) => !open && setAberto(null)} />
+      <ProdutoGaleria
+        produto={galeriaAberta}
+        onOpenChange={(open) => !open && setGaleriaAberta(null)}
+      />
     </>
   );
 }
@@ -224,6 +230,84 @@ function ProdutoModal({ produto, onOpenChange }: { produto: Produto | null; onOp
                 <MessageCircle className="size-4" /> Solicitar orçamento no WhatsApp
               </a>
             </div>
+          </div>
+        )}
+      </DialogContent>
+    </Dialog>
+  ); 
+}
+
+function ProdutoGaleria({
+  produto,
+  onOpenChange,
+}: {
+  produto: Produto | null;
+  onOpenChange: (open: boolean) => void;
+}) {
+  const [ativa, setAtiva] = useState(0);
+
+  const galeria = produto?.galeria?.length
+    ? produto.galeria
+    : produto
+      ? [produto.imagem]
+      : [];
+
+  return (
+    <Dialog
+      open={!!produto}
+      onOpenChange={(open) => {
+        onOpenChange(open);
+
+        if (!open) {
+          setAtiva(0);
+        }
+      }}
+    >
+      <DialogContent className="max-w-5xl max-h-[95vh] overflow-y-auto p-4 md:p-6">
+        {produto && (
+          <div className="flex flex-col gap-4">
+            <DialogHeader>
+              <DialogTitle className="font-display text-xl md:text-2xl font-bold text-left">
+                {produto.nome}
+              </DialogTitle>
+
+              <DialogDescription className="text-left">
+                Fotos do produto
+              </DialogDescription>
+            </DialogHeader>
+
+            <div className="aspect-[4/3] overflow-hidden rounded-xl bg-muted">
+              <img
+                src={galeria[ativa]}
+                alt={`${produto.nome} - foto ${ativa + 1}`}
+                className="size-full object-contain"
+              />
+            </div>
+
+            {galeria.length > 1 && (
+              <div className="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2">
+                {galeria.map((src, i) => (
+                  <button
+                    key={i}
+                    type="button"
+                    onClick={() => setAtiva(i)}
+                    aria-label={`Ver foto ${i + 1}`}
+                    className={`aspect-square rounded-lg overflow-hidden border-2 transition ${
+                      i === ativa
+                        ? "border-[var(--brand)]"
+                        : "border-transparent opacity-70 hover:opacity-100"
+                    }`}
+                  >
+                    <img
+                      src={src}
+                      alt={`${produto.nome} ${i + 1}`}
+                      className="size-full object-cover"
+                      loading="lazy"
+                    />
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
         )}
       </DialogContent>

@@ -54,9 +54,25 @@ return (
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {lista.map((p) => (
             <article key={p.id} className="group bg-card rounded-2xl overflow-hidden border border-border shadow-[var(--shadow-card)] flex flex-col">
-              <div className="aspect-[4/3] overflow-hidden bg-muted">
-                <img src={p.imagem} alt={p.nome} loading="lazy" width={1024} height={768} className="size-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              </div>
+              <button
+                type="button"
+                onClick={() => setAberto(p)}
+                aria-label={`Ver detalhes de ${p.nome}`}
+                className="aspect-[4/3] overflow-hidden bg-muted cursor-pointer"
+              >
+                <img
+                  src={p.imagem}
+                  alt={p.nome}
+                  loading="lazy"
+                  width={1024}
+                  height={768}
+                  className="size-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+
+                <span className="sr-only">
+                  Ver detalhes de {p.nome}
+                </span>
+              </button>
               <div className="p-6 flex-1 flex flex-col">
                 <span className="text-xs font-semibold tracking-wider uppercase text-[var(--brand)]/70">{p.categoria}</span>
                 <h3 className="font-display font-bold text-xl mt-1">{p.nome}</h3>

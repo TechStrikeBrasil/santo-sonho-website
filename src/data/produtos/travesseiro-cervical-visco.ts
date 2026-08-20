@@ -1,6 +1,7 @@
 import type { Produto } from "../../types/produto";
 
 import cervicalVisco1 from "../../assets/produtos/travesseiro-cervical-visco/cervical-visco-1.webp";
+import cervicalVisco2 from "../../assets/produtos/travesseiro-cervical-visco/cervical-visco-2.webp";
 
 
 export const travesseiroCervical: Produto = {
@@ -17,6 +18,7 @@ export const travesseiroCervical: Produto = {
 
   galeria: [
     cervicalVisco1,
+    cervicalVisco2
   ],
 
   caracteristicas: [

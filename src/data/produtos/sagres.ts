@@ -56,6 +56,10 @@ export const sagres: Produto = {
 
   especificacoes: [
     {
+      label: "Suporte",
+      value: "Até 250 kg por pessoa.",
+    },
+    {
       label: "Molejo",
       value: "Molas ensacadas individualmente em aço 2,0 mm.",
     },

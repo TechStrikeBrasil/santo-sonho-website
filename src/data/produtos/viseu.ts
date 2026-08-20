@@ -58,6 +58,10 @@ export const viseu: Produto = {
 
   especificacoes: [
     {
+      label: "Suporte",
+      value: "Até 160 kg por pessoa.",
+    },
+    {
       label: "Molejo",
       value: "Ensacado individualmente High Steel 2.0",
     },

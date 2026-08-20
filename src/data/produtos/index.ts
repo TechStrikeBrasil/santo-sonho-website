@@ -29,7 +29,6 @@ import { cabeceiraGessi } from "./cabeceira-gessi";
 import { cabeceiraSimone } from "./cabeceira-simone";
 import { recamier } from "./box-recamier";
 
-import { travesseiroCamomile } from "./travesseiro-camomile";
 import { travesseiroEuroflex } from "./travesseiro-euroflex";
 import { travesseiroIonsPrata } from "./travesseiro-ions-de-prata";
 import { travesseiroBambuFirme } from "./travesseiro-bambu-firme";
@@ -51,8 +50,6 @@ import { protetorBaby } from "./acessorio-protetor-baby";
 import { poltronaPapai } from "./acessorio-poltrona-papai";
 import { shiatsu } from "./acessorio-shiatsu";
 import { puffSankonfort } from "./acessorio-puff-sankonfort";
-import { protetorProtectSoft } from "./acessorio-protetor-protect-soft";
-import { esteiraMassageadora } from "./acessorio-esteira-massageadora";
 import { colchoneteCamping } from "./acessorio-colchonete-camping";
 import { capaTrisoft } from "./acessorio-capa-trisoft";
 import { apoioPernas } from "./acessorio-apoio-pernas";
@@ -99,7 +96,6 @@ export const PRODUTOS = [
     cabeceiraSimone,
 
 // TRAVESSEIROS
-    travesseiroCamomile,
     travesseiroEuroflex,
     travesseiroIonsPrata,
     travesseiroBambuFirme,
@@ -114,15 +110,13 @@ export const PRODUTOS = [
     travesseiroDubai,
 
 // ACESSÓRIOS
-    shiatsu,
-    esteiraMassageadora,
+    shiatsu,    
     colchoneteCamping,
     apoioPernas,
     puffSankonfort,
     cascaOvo,
     descansoTriangulo,
     triRelax,
-    protetorProtectSoft,
     poltronaPapai,
     protetorImpermeavel,
     protetorBaby,
